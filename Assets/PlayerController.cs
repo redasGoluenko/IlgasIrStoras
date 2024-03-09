@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    bool fullAuto = false;
     public Camera sceneCamera;
     public float moveSpeed;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
     private Vector2 mousePosition;
     public Weapon weapon;
+    Coroutine powerupTimerCoroutine;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,7 +21,26 @@ public class PlayerController : MonoBehaviour
             // Stop player movement upon collision with a wall
             rb.velocity = Vector2.zero;
         }
+        if (collision.gameObject.CompareTag("Powerup"))
+        {
+            // Destroy the powerup GameObject upon collision with a wall
+            Destroy(collision.gameObject);
+            fullAuto = true;
+
+            // Start the coroutine to reset fullAuto after 10 seconds
+            if (powerupTimerCoroutine != null)
+                StopCoroutine(powerupTimerCoroutine);
+            powerupTimerCoroutine = StartCoroutine(PowerupTimer());
+        }
     }
+
+    IEnumerator PowerupTimer()
+    {
+        yield return new WaitForSeconds(10f); // Wait for 10 seconds
+        fullAuto = false; // Reset fullAuto after 10 seconds
+    }
+
+
 
     // Update is called once per frame
     void Update()
@@ -38,7 +59,11 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(0) && fullAuto)
+        {
+            weapon.Fire();
+        }
+        else if (Input.GetMouseButtonDown(0))
         {
             weapon.Fire();
         }
