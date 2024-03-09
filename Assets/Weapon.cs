@@ -15,5 +15,6 @@ public class Weapon : MonoBehaviour
 
         // Destroy the projectile after 5 seconds
         Destroy(projectile, 2f);
+        //test
     }
 }
