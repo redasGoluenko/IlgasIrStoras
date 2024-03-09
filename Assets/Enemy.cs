@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
 
             // Destroy the enemy when it collides with a projectile
             Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Player"))
         {
