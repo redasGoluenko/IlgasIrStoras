@@ -9,7 +9,11 @@ public class Weapon : MonoBehaviour
     public float fireForce;
     public void Fire()
     {
-       GameObject projectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
-        projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.up * 5f, ForceMode2D.Impulse);
+        GameObject projectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+
+        // Destroy the projectile after 5 seconds
+        Destroy(projectile, 5f);
     }
 }
