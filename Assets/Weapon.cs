@@ -14,6 +14,6 @@ public class Weapon : MonoBehaviour
         rb.AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
 
         // Destroy the projectile after 5 seconds
-        Destroy(projectile, 5f);
+        Destroy(projectile, 2f);
     }
 }
