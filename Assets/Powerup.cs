@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D collision)
+    // Start is called before the first frame update
+    void Start()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // Destroy the player GameObject upon collision with a wall
-            Destroy(gameObject);
-        }
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
