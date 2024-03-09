@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rocky_pixelated_0: -746358262149821314
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
