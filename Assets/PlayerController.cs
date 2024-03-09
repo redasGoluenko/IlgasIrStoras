@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();      
+        Move();
     }
 
     void ProcessInputs()
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetMouseButton(0) && fullAuto)
+        if (Input.GetMouseButton(0) && fullAuto)
         {
             weapon.Fire();
         }
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     }
 
     //turns image so the image is facing the direction of movement
-   
+
     void Move()
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
@@ -84,5 +84,5 @@ public class PlayerController : MonoBehaviour
         Vector2 aimDirection = mousePosition - rb.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = aimAngle;
-    }    
+    }
 }
