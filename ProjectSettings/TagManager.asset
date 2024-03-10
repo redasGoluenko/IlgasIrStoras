@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Wall
   - Powerup
+  - Enemy
+  - projectile
+  - Homing
   layers:
   - Default
   - TransparentFX
