@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    bool fullAuto = false;
+    private bool fullAuto = false;   
     public Camera sceneCamera;
     public float moveSpeed;
     public Rigidbody2D rb;
@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 mousePosition;
     public Weapon weapon;
     Coroutine powerupTimerCoroutine;
+    private int randomValue;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -23,14 +24,28 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Powerup"))
         {
+            randomValue = Random.Range(0,2);
             // Destroy the powerup GameObject upon collision with a wall
             Destroy(collision.gameObject);
-            fullAuto = true;
-
-            // Start the coroutine to reset fullAuto after 10 seconds
-            if (powerupTimerCoroutine != null)
-                StopCoroutine(powerupTimerCoroutine);
-            powerupTimerCoroutine = StartCoroutine(PowerupTimer());
+            
+            if(randomValue == 0)
+            {
+                fullAuto = true;
+                // Start the coroutine to reset fullAuto after 10 seconds
+                if (powerupTimerCoroutine != null)
+                    StopCoroutine(powerupTimerCoroutine);
+                powerupTimerCoroutine = StartCoroutine(PowerupTimer());
+            }
+            else if(randomValue == 1)
+            {
+                // Increase speed to 10f upon collision with a powerup
+                moveSpeed = 10f;               
+                // Start the coroutine to reset speed after 10 seconds
+                if (powerupTimerCoroutine != null)
+                    StopCoroutine(powerupTimerCoroutine);
+                powerupTimerCoroutine = StartCoroutine(PowerupTimer());
+            }
+            
         }
     }
 
@@ -38,6 +53,7 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(10f); // Wait for 10 seconds
         fullAuto = false; // Reset fullAuto after 10 seconds
+        moveSpeed = 5f; // Reset speed to 5f after 10 seconds
     }
 
 
