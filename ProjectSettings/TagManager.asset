@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - projectile
   - Homing
+  - Death Text
   layers:
   - Default
   - TransparentFX
