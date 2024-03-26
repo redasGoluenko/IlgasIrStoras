@@ -696,9 +696,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 100274549}
     - target: {fileID: 4242128667971281975, guid: a07de713e4cdae44d93005bf09689c24, type: 3}
+      propertyPath: shootCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4242128667971281975, guid: a07de713e4cdae44d93005bf09689c24, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 100274550}
+    - target: {fileID: 4242128667971281975, guid: a07de713e4cdae44d93005bf09689c24, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 172831438787633922, guid: f009166811d7140469e8f01e0faeef1d, type: 3}
     - target: {fileID: 5236919070195267977, guid: a07de713e4cdae44d93005bf09689c24, type: 3}
       propertyPath: m_Name
       value: Low Level Enemy
@@ -1936,6 +1944,10 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: 1504837553}
+    - target: {fileID: 2208135323930854670, guid: 428416efc33ccf84d88a6a60b5b508e7, type: 3}
+      propertyPath: spawnInterval
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6175436660690162196, guid: 428416efc33ccf84d88a6a60b5b508e7, type: 3}
       propertyPath: m_Name
       value: Low Level Enemy Spawner

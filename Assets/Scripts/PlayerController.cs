@@ -55,7 +55,10 @@ public class PlayerController : MonoBehaviour
             {
                 weapon.IncreaseFireForce(20);
             }
-
+        }
+        if(collision.gameObject.CompareTag("projectile"))
+        {
+            TakeDamage(10);
         }
     }
 
