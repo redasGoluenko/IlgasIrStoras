@@ -15,7 +15,12 @@ public class PlayerController : MonoBehaviour
     Coroutine powerupTimerCoroutine;
     private int randomValue;
     private bool canFire = true; // Track if the player can fire
-
+    public HealthBar healthBar;
+    public int health = 100;
+    public void Start()
+    {
+        healthBar.SetHealth(100);
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
@@ -125,4 +130,18 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.1f); // Adjust this value to control the firing rate
         canFire = true; // Set canFire to true to allow firing again after the delay
     }
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        healthBar.SetHealth(health);
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
 }
