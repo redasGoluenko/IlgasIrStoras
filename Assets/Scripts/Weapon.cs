@@ -17,4 +17,15 @@ public class Weapon : MonoBehaviour
         // Destroy the projectile after 5 seconds
         Destroy(projectile, 2f);
     }
+    public void IncreaseFireForce(int amount)
+    {
+        //increase fireForce by amount for 10 seconds
+        fireForce += amount;
+        StartCoroutine(ResetFireForce(amount));
+    }
+    IEnumerator ResetFireForce(int amount)
+    {
+        yield return new WaitForSeconds(10f);
+        fireForce -= amount;
+    }
 }

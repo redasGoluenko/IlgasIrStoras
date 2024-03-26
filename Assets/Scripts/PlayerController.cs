@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Weapon weapon;
     Coroutine powerupTimerCoroutine;
     private int randomValue;
+    private bool canFire = true; // Track if the player can fire
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Powerup"))
         {
-            randomValue = Random.Range(0, 2);
+            randomValue = Random.Range(0, 3);
             // Destroy the powerup GameObject upon collision with a wall
             Destroy(collision.gameObject);
 
@@ -44,6 +45,10 @@ public class PlayerController : MonoBehaviour
                 if (powerupTimerCoroutine != null)
                     StopCoroutine(powerupTimerCoroutine);
                 powerupTimerCoroutine = StartCoroutine(PowerupTimer());
+            }
+            else if (randomValue == 2)
+            {
+                weapon.IncreaseFireForce(20);
             }
 
         }
@@ -73,9 +78,9 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetMouseButton(0) && fullAuto)
+        if (Input.GetMouseButton(0) && fullAuto && canFire) // Check if full auto and can fire
         {
-            weapon.Fire();
+            StartCoroutine(FireWithDelay());
         }
         else if (Input.GetMouseButtonDown(0))
         {
@@ -112,5 +117,12 @@ public class PlayerController : MonoBehaviour
         Vector2 aimDirection = mousePosition - rb.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = aimAngle;
+    }
+    IEnumerator FireWithDelay()
+    {
+        canFire = false; // Set canFire to false to prevent firing multiple shots quickly
+        weapon.Fire();
+        yield return new WaitForSeconds(0.1f); // Adjust this value to control the firing rate
+        canFire = true; // Set canFire to true to allow firing again after the delay
     }
 }
