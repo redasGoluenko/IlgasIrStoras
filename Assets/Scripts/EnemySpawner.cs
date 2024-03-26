@@ -30,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
     //if the spawner collides with a projectile it gets destroyed
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("projectile"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }

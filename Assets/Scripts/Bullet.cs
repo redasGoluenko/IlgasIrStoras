@@ -25,5 +25,9 @@ public class Bullet : MonoBehaviour
             reflectDir = Quaternion.Euler(0, 0, randomAngle) * reflectDir;
             GetComponent<Rigidbody2D>().velocity = reflectDir * speed * bounciness;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
