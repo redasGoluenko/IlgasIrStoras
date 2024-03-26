@@ -35,8 +35,7 @@ public class Enemy : MonoBehaviour
                 bufferDistance = 1f; // The buffer distance to stop moving when a wall is close
                 // Move towards the target object
                 transform.Translate((targetObject.position - transform.position).normalized * moveSpeed * Time.deltaTime);
-            }
-                                               
+            }         
         }
     }
 
