@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Daco_4135632_0: 3289687335860225420
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
