@@ -10,6 +10,10 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("PlayButton"))
+        {
+            SceneControl.Instance.NextScene();
+        }
         // Check if bullet collides with the wall
         if (collision.gameObject.CompareTag("Wall"))
         {

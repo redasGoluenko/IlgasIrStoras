@@ -10,6 +10,7 @@ TagManager:
   - projectile
   - Homing
   - Death Text
+  - PlayButton
   layers:
   - Default
   - TransparentFX
