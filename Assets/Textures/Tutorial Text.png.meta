@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 815ca9ea386ea294faadbe4e6866bac5
+guid: b28502d6c9965db4091914f94a1098c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6460927965699514138
-    second: Settings button_0
+      213: -5622359155389896726
+    second: Tutorial Text_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Settings button_0
+      name: Tutorial Text_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 525
-        height: 255
+        width: 380
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e0e7152f3c2656a0800000000000000
-      internalID: -6460927965699514138
+      spriteID: ae7e15ff22e59f1b0800000000000000
+      internalID: -5622359155389896726
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Settings button_0: -6460927965699514138
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
