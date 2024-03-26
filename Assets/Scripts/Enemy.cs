@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     private int hitCount = 0; // The number of times the enemy has been hit
     private Color hitColor = Color.red; // The color to change to when hit
     public Rigidbody2D rb; // Reference to the Rigidbody2D component  
+    public PlayerController playerController; // Reference to the PlayerController script
 
     private void Start()
     {
@@ -60,6 +61,7 @@ public class Enemy : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Player"))
         {          
+            playerController.TakeDamage(50); // Call the TakeDamage method in the PlayerController script
         }
     }  
 }
