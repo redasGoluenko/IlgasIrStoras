@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
     {
         canFire = false; // Set canFire to false to prevent firing multiple shots quickly
         weapon.Fire();
-        yield return new WaitForSeconds(0.1f); // Adjust this value to control the firing rate
+        yield return new WaitForSeconds(0.05f); // Adjust this value to control the firing rate
         canFire = true; // Set canFire to true to allow firing again after the delay
     }
     public void Die()
