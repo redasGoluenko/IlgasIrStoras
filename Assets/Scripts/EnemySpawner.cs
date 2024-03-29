@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public Enemy enemyPrefab;
+
     public float spawnInterval = 10f;
 
     IEnumerator Start()

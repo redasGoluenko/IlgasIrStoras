@@ -27,7 +27,6 @@ public class DeathText : MonoBehaviour
 
     private bool PlayerObjectDestroyed()
     {
-        // You should replace "Player" with the tag or name of your player object
         GameObject playerObject = GameObject.FindWithTag("Player");
 
         // Check if the player object is destroyed

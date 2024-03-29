@@ -2,19 +2,22 @@ using System;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{  
-    public int health = 10; // The amount of health the enemy has
-    public Transform targetObject; // The object to move towards
-    public float moveSpeed = 5f; // The speed at which the sprite moves
-    private float bufferDistance = 100f; // The buffer distance to stop moving when a wall is close
+{
     private SpriteRenderer spriteRenderer; // Reference to the sprite renderer
-    private int hitCount = 0; // The number of times the enemy has been hit
-    private Color hitColor = Color.red; // The color to change to when hit
+    public Transform targetObject; // The object to move towards
     public Rigidbody2D rb; // Reference to the Rigidbody2D component  
     public PlayerController playerController; // Reference to the PlayerController script
     public GameObject projectilePrefab;
+
+    public float moveSpeed = 5f; // The speed at which the sprite moves
     public float shootCooldown = 2f;
+    public int health = 10; // The amount of health the enemy has
+
+    private float bufferDistance = 100f; // The buffer distance to stop moving when a wall is close
     private float shootTimer = 0f;
+    private int hitCount = 0; // The number of times the enemy has been hit
+    private Color hitColor = Color.red; // The color to change to when hit
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); // Get the sprite renderer component       

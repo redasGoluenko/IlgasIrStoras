@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private bool fullAuto = false;
-    private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown
     public Camera sceneCamera;
-    public float moveSpeed;
     public Rigidbody2D rb;
+    public Weapon weapon;
+    public HealthBar healthBar;
+    Coroutine powerupTimerCoroutine;
+
     private Vector2 moveDirection;
     private Vector2 mousePosition;
-    public Weapon weapon;
-    Coroutine powerupTimerCoroutine;
+
+    private bool fullAuto = false;
+    private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown
     private int randomValue;
     private bool canFire = true; // Track if the player can fire
-    public HealthBar healthBar;
+
+    public float moveSpeed;
     public int health = 100;
+
     public void Start()
     {
         healthBar.SetHealth(100);

@@ -5,16 +5,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f; // Adjust speed as needed
+    [SerializeField] private float speed = 10f; // Speed after bounce
     [SerializeField] private float bounciness = 0.8f; // Adjust bounciness (0 = no bounce, 1 = perfect bounce)
 
+    //Deals with the bullets collision response
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("PlayButton"))
-        {
-            SceneControl.Instance.NextScene();
-        }
-        // Check if bullet collides with the wall
         if (collision.gameObject.CompareTag("Wall"))
         {
             // Calculate the reflection direction
@@ -28,6 +24,10 @@ public class Bullet : MonoBehaviour
             float randomAngle = Random.Range(-15f, 15f); // Adjust angle randomness as needed
             reflectDir = Quaternion.Euler(0, 0, randomAngle) * reflectDir;
             GetComponent<Rigidbody2D>().velocity = reflectDir * speed * bounciness;
+        }
+        else if(collision.gameObject.CompareTag("PlayButton"))
+        {
+            SceneControl.Instance.NextScene();
         }
         else
         {
