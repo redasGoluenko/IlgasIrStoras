@@ -11,6 +11,7 @@ TagManager:
   - Homing
   - Death Text
   - PlayButton
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
