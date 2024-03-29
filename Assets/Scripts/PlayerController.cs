@@ -78,12 +78,7 @@ public class PlayerController : MonoBehaviour
         }   
     }
 
-    IEnumerator PowerupTimer()
-    {
-        yield return new WaitForSeconds(10f); // Wait for 10 seconds
-        fullAuto = false; // Reset fullAuto after 10 seconds
-        moveSpeed = 5f; // Reset speed to 5f after 10 seconds
-    }
+   
 
     // Update is called once per frame
     void Update()
@@ -149,13 +144,13 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.05f); // Adjust this value to control the firing rate
         canFire = true; // Set canFire to true to allow firing again after the delay
     }
-    public void Die()
-    {
-        Destroy(gameObject);    
-        //stop time
-        Time.timeScale = 0;
-    }
 
+    IEnumerator PowerupTimer()
+    {
+        yield return new WaitForSeconds(10f); // Wait for 10 seconds
+        fullAuto = false; // Reset fullAuto after 10 seconds
+        moveSpeed = 5f; // Reset speed to 5f after 10 seconds
+    }
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -165,5 +160,13 @@ public class PlayerController : MonoBehaviour
             Die();
         }
     }
+    public void Die()
+    {
+        Destroy(gameObject);    
+        //stop time
+        Time.timeScale = 0;
+    }
+
+    
 
 }
