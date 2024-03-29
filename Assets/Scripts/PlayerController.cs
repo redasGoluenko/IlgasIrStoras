@@ -60,10 +60,14 @@ public class PlayerController : MonoBehaviour
                 weapon.IncreaseFireForce(20);
             }
         }
-        if(collision.gameObject.CompareTag("projectile"))
+        if(collision.gameObject.CompareTag("EnemyProjectile"))
         {
             TakeDamage(10);
         }
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(50);
+        }   
     }
 
     IEnumerator PowerupTimer()
@@ -139,8 +143,11 @@ public class PlayerController : MonoBehaviour
     }
     public void Die()
     {
-        Destroy(gameObject);
+        Destroy(gameObject);    
+        //stop time
+        Time.timeScale = 0;
     }
+
     public void TakeDamage(int damage)
     {
         health -= damage;

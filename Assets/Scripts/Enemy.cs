@@ -3,56 +3,54 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer; // Reference to the sprite renderer
-    public Transform targetObject; // The object to move towards
-    public Rigidbody2D rb; // Reference to the Rigidbody2D component  
-    public PlayerController playerController; // Reference to the PlayerController script
-    public GameObject projectilePrefab;
-
-    public float moveSpeed = 5f; // The speed at which the sprite moves
-    public float shootCooldown = 2f;
-    public int health = 10; // The amount of health the enemy has
-
-    private float bufferDistance = 100f; // The buffer distance to stop moving when a wall is close
-    private float shootTimer = 0f;
+    public SpriteRenderer spriteRenderer; // Reference to the sprite renderer
     private int hitCount = 0; // The number of times the enemy has been hit
     private Color hitColor = Color.red; // The color to change to when hit
+    private GameObject targetObject; // Reference to the player object
+    private float shootTimer = 0f;
+    public float shootCooldown = 2f;
+    public GameObject projectilePrefab; // Reference to the projectile prefab
 
+    public int health = 10; // The amount of health the enemy has
+
+    //start method
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Get the sprite renderer component       
+        // Find the player object in the scene
+        targetObject = GameObject.FindGameObjectWithTag("Player");
     }
-
+    //update mehod
     private void Update()
     {
         if (targetObject != null)
         {
-            // Check for obstacles between the enemy and the player
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, (targetObject.position - transform.position).normalized, Mathf.Infinity, LayerMask.GetMask("Wall"));
+            // Calculate the direction from the player to the enemy
+            Vector2 direction = (transform.position - targetObject.transform.position).normalized;
 
-            if (hit.collider != null && hit.collider.CompareTag("Wall") && hit.distance <= bufferDistance)
+            // Calculate the distance between the player and the enemy
+            float distanceToEnemy = Vector2.Distance(targetObject.transform.position, transform.position);
+
+            // Cast a ray from the player towards the enemy with limited distance
+            RaycastHit2D hit = Physics2D.Raycast(targetObject.transform.position, direction, distanceToEnemy, LayerMask.GetMask("Wall"));
+
+            // Draw a debug line to visualize the ray
+            Debug.DrawRay(targetObject.transform.position, direction * distanceToEnemy, Color.green);
+
+            if (hit.collider != null && hit.collider.CompareTag("Wall"))
             {
-                // If there's a wall within buffer distance, don't move
-                return;
+                // If the ray hits a wall, do not shoot
             }
             else
-            {         
-                bufferDistance = 1f; // The buffer distance to stop moving when a wall is close
-                // Move towards the target object
-                transform.Translate((targetObject.position - transform.position).normalized * moveSpeed * Time.deltaTime);
-            }         
-        }
-        if (targetObject != null)
-        {
-            // Update the shoot timer
-            shootTimer -= Time.deltaTime;
+            {             
+                shootTimer -= Time.deltaTime;
 
-            // If the shoot timer reaches zero, shoot
-            if (shootTimer <= 0)
-            {
-                Shoot();
-                // Reset the shoot timer
-                shootTimer = shootCooldown;
+                // If the shoot timer reaches zero, shoot
+                if (shootTimer <= 0)
+                {
+                    Shoot();
+                    // Reset the shoot timer
+                    shootTimer = shootCooldown;
+                }
             }
         }
     }
@@ -62,23 +60,24 @@ public class Enemy : MonoBehaviour
         float spawnOffset = 1.5f;
 
         // Calculate the spawn position of the projectile slightly away from the enemy
-        Vector3 spawnPosition = transform.position + (targetObject.position - transform.position).normalized * spawnOffset;
+        Vector3 spawnPosition = transform.position + (targetObject.transform.position - transform.position).normalized * spawnOffset;
 
         // Instantiate a projectile at the calculated spawn position
         GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
 
         // Calculate direction towards the player
-        Vector2 direction = (targetObject.position - transform.position).normalized;
+        Vector2 direction = (targetObject.transform.position - transform.position).normalized;
 
         // Set velocity of the projectile
         projectile.GetComponent<Rigidbody2D>().velocity = direction * 10f;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("projectile"))
         {
-            Destroy(collision.gameObject);
             health--; // Decrease the health by 1
             hitCount++; // Increase the hit count
 
@@ -93,9 +92,5 @@ public class Enemy : MonoBehaviour
                 spriteRenderer.color = Color.Lerp(Color.white, hitColor, redAmount); // Interpolate between white and hitColor based on the ratio
             }
         }
-        if (collision.gameObject.CompareTag("Player"))
-        {          
-            playerController.TakeDamage(50); // Call the TakeDamage method in the PlayerController script
-        }
-    }  
+    }
 }
