@@ -64,6 +64,10 @@ public class PlayerController : MonoBehaviour
         {
             TakeDamage(10);
         }
+        if (collision.gameObject.CompareTag("projectile"))
+        {
+            TakeDamage(5);
+        }
         if(collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage(50);
