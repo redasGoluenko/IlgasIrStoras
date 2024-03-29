@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Weapon weapon;
     public HealthBar healthBar;
+    public DamageUI damageUI;
     Coroutine powerupTimerCoroutine;
 
     private Vector2 moveDirection;
@@ -63,14 +64,17 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("EnemyProjectile"))
         {
             TakeDamage(10);
+            damageUI.TakeDamage(10, 100);
         }
         if (collision.gameObject.CompareTag("projectile"))
         {
             TakeDamage(5);
+            damageUI.TakeDamage(5, 100);
         }
         if(collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage(50);
+            damageUI.TakeDamage(50, 100);
         }   
     }
 

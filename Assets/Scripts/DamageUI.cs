@@ -1,25 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; // Import the UI namespace
 
 public class DamageUI : MonoBehaviour
 {
-    PlayerController player;
-    public Image image;
+    // Reference to the Image component
+    public Image overlay;
+    private float damagePercentage = 0;
 
+    // Start is called before the first frame update
     void Start()
     {
-        image = GetComponent<Image>();
-
-        // Set the alpha value of the image color to 1 (fully opaque)
-        if (image != null)
-        {
-            Color color = image.color;
-            color.a = 0f; // Set alpha to maximum (1)
-            image.color = color;
-        }
+        overlay.color = new Color(1, 1, 1, damagePercentage); // Set the initial alpha value to 0
     }
-
+    // Update is called once per frame
     void Update()
-    {     
+    {
+
+    }
+    public void TakeDamage(int damage, int maxHealth)
+    {
+        // Calculate the percentage of damage taken relative to max health
+        damagePercentage += (float)damage / (float)maxHealth;
+        // Set the alpha value accordingly
+        overlay.color = new Color(1, 1, 1, damagePercentage);
+    }
+    public void GainHealth(int health, int maxHealth)
+    {
+        // Calculate the percentage of health gained relative to max health
+        damagePercentage -= (float)health / (float)maxHealth;
+        // Set the alpha value accordingly
+        overlay.color = new Color(1, 1, 1, damagePercentage);
     }
 }
