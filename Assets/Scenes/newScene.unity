@@ -2984,6 +2984,10 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: 897263124}
+    - target: {fileID: 2208135323930854670, guid: 428416efc33ccf84d88a6a60b5b508e7, type: 3}
+      propertyPath: spawnInterval
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6175436660690162196, guid: 428416efc33ccf84d88a6a60b5b508e7, type: 3}
       propertyPath: m_Name
       value: Low Level Enemy Spawner
