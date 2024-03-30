@@ -6,7 +6,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float speed = 10f; // Speed after bounce
-    [SerializeField] private float bounciness = 0.8f; // Adjust bounciness (0 = no bounce, 1 = perfect bounce)
+    [SerializeField] private float bounciness = 0.8f; // Adjust bounciness (0 = no bounce, 1 = perfect bounce)  
 
     //Deals with the bullets collision response
     private void OnCollisionEnter2D(Collision2D collision)
@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
         else if(collision.gameObject.CompareTag("PlayButton"))
         {
             SceneControl.Instance.NextScene();
-        }
+        }     
         else
         {
             Destroy(gameObject);

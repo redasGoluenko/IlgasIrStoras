@@ -3,15 +3,17 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header ("Object References")]
     public GameObject projectilePrefab; // Reference to the projectile prefab
     public GameObject deathEffect; // Reference to the death effect prefab
     private GameObject targetObject; // Reference to the player object
     public SpriteRenderer spriteRenderer; // Reference to the sprite renderer
-    
+    public AudioManager audioManager;
+
+    [Header("Enemy Stats")]
     private int hitCount = 0; // The number of times the enemy has been hit
     private Color hitColor = Color.red; // The color to change to when hit
     private float shootTimer = 0f;
-
     public float shootCooldown = 2f;
     public int health = 10; // The amount of health the enemy has
 
@@ -58,6 +60,7 @@ public class Enemy : MonoBehaviour
     }
     void Shoot()
     {
+        audioManager.PlayEnemyShootingSound();
         // Define the offset distance from the enemy where the projectile will spawn
         float spawnOffset = 1.5f;
 
@@ -80,11 +83,14 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("projectile"))
         {
+            audioManager.PlayEnemyHitSound();
+
             health--; // Decrease the health by 1
             hitCount++; // Increase the hit count
 
             if (health <= 0)
             {
+                audioManager.PlayEnemyDeathSound();
                 GameObject effectInstance = Instantiate(deathEffect, transform.position, Quaternion.identity); // Instantiate the death effect
                 Destroy(gameObject); // Destroy the enemy object
                 Destroy(effectInstance, 2.0f); // Destroy the death effect instance after 2 seconds (adjust as needed)

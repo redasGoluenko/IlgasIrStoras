@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header ("Object references")]
     public Camera sceneCamera;
     public Rigidbody2D rb;
     public Weapon weapon;
     public HealthBar healthBar;
     public DamageUI damageUI;
     Coroutine powerupTimerCoroutine;
+    public AudioManager audioManager;
 
     private Vector2 moveDirection;
     private Vector2 mousePosition;
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private int randomValue;
     private bool canFire = true; // Track if the player can fire
 
+    [Header("Player Stats")]
     public float moveSpeed;
     public int health = 100;
 
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Powerup"))
         {
+            audioManager.PlayPowerupPickupSound();
             randomValue = Random.Range(0, 3);
             // Destroy the powerup GameObject upon collision with a wall
             Destroy(collision.gameObject);
@@ -108,6 +112,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && !speedBoostOnCooldown) // Check if speed boost is not on cooldown
         {
+            audioManager.PlayDashingSound();
             StartCoroutine(ActivateSpeedBoost(20f, 0.075f));
         }
 
@@ -153,6 +158,7 @@ public class PlayerController : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        audioManager.PlayPlayerHitSound();
         health -= damage;
         healthBar.SetHealth(health);
         if (health <= 0)
@@ -162,6 +168,8 @@ public class PlayerController : MonoBehaviour
     }
     public void Die()
     {
+        audioManager.PlayPlayerDeathSound();
+        audioManager.StopBackgroundMusic();
         Destroy(gameObject);    
         //stop time
         Time.timeScale = 0;

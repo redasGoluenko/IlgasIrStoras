@@ -7,14 +7,16 @@ public class Weapon : MonoBehaviour
 {
     public GameObject bullet;
     public Transform firePoint;
+    public AudioManager audioManager;
+
     public float fireForce;
     public void Fire()
     {
+        // Play the shooting sound
+        audioManager.PlayShootingSound();
         GameObject projectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
-
-        // Destroy the projectile after 5 seconds
         Destroy(projectile, 2f);
     }
     public void IncreaseFireForce(int amount)
