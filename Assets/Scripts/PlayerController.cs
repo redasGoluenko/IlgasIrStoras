@@ -16,10 +16,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDirection;
     private Vector2 mousePosition;
 
+
     private bool fullAuto = false;
     private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown
     private int randomValue;
     private bool canFire = true; // Track if the player can fire
+    private bool isHeartbeatPlaying = false;  
 
     [Header("Player Stats")]
     public float moveSpeed;
@@ -88,7 +90,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         ProcessInputs();
-
     }
 
     void FixedUpdate()
@@ -174,7 +175,4 @@ public class PlayerController : MonoBehaviour
         //stop time
         Time.timeScale = 0;
     }
-
-    
-
 }
