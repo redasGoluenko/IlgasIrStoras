@@ -3,14 +3,16 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject projectilePrefab; // Reference to the projectile prefab
+    public GameObject deathEffect; // Reference to the death effect prefab
+    private GameObject targetObject; // Reference to the player object
     public SpriteRenderer spriteRenderer; // Reference to the sprite renderer
+    
     private int hitCount = 0; // The number of times the enemy has been hit
     private Color hitColor = Color.red; // The color to change to when hit
-    private GameObject targetObject; // Reference to the player object
     private float shootTimer = 0f;
-    public float shootCooldown = 2f;
-    public GameObject projectilePrefab; // Reference to the projectile prefab
 
+    public float shootCooldown = 2f;
     public int health = 10; // The amount of health the enemy has
 
     //start method
@@ -83,7 +85,9 @@ public class Enemy : MonoBehaviour
 
             if (health <= 0)
             {
-                Destroy(gameObject);
+                GameObject effectInstance = Instantiate(deathEffect, transform.position, Quaternion.identity); // Instantiate the death effect
+                Destroy(gameObject); // Destroy the enemy object
+                Destroy(effectInstance, 2.0f); // Destroy the death effect instance after 2 seconds (adjust as needed)
             }
             else
             {

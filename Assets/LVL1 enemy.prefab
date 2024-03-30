@@ -101,9 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e14ae613318f340ab0064e064546a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 3708285348958812731}
   projectilePrefab: {fileID: 172831438787633922, guid: f009166811d7140469e8f01e0faeef1d, type: 3}
-  projectileSpeed: 5
+  deathEffect: {fileID: 2406609476657527630, guid: 86c5024f96165264381109d70c328110, type: 3}
+  spriteRenderer: {fileID: 3708285348958812731}
+  shootCooldown: 2
   health: 10
 --- !u!50 &-131214453001404273
 Rigidbody2D:
