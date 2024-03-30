@@ -15,6 +15,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource enemyDeathSoundSource;
     [SerializeField] private AudioSource enemyHitSoundSource;
     [SerializeField] private AudioSource enemyShootingSoundSource; // Reference to the AudioSource component for enemy shooting sound
+    [SerializeField] private AudioSource enemySpawnerDestroySoundSource; // Reference to the AudioSource component for enemy death sound
+    [SerializeField] private AudioSource enemySpawnSoundSource;
 
     [Header("Audio Clips ( where the sounds go )")]
     public AudioClip driving; // Reference to the driving sound effect
@@ -27,6 +29,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip enemyDeath;
     public AudioClip enemyHit;
     public AudioClip enemyShooting; // Reference to the enemy shooting sound effect
+    public AudioClip enemySpawnerDestroy;
+    public AudioClip enemySpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -97,5 +101,13 @@ public class AudioManager : MonoBehaviour
     public void PlayEnemyShootingSound()
     {
         enemyShootingSoundSource.PlayOneShot(enemyShooting);
+    }
+    public void PlayEnemySpawnerDestroySound()
+    {
+        enemySpawnerDestroySoundSource.PlayOneShot(enemySpawnerDestroy);
+    }
+    public void PlayEnemySpawnSound()
+    {
+        enemySpawnSoundSource.PlayOneShot(enemySpawn);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    public AudioManager audioManager;
 
     public float spawnInterval = 10f;
 
@@ -20,6 +21,7 @@ public class EnemySpawner : MonoBehaviour
     // Spawn an enemy to the right of this object
     public void SpawnEnemy()
     {
+        audioManager.PlayEnemySpawnSound();
         //make it so its randomly either to the toleft right or bottom
         int random = Random.Range(0, 3);
         if (random == 0)
@@ -34,6 +36,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            audioManager.PlayEnemySpawnerDestroySound();
             Destroy(gameObject);
         }
     }
