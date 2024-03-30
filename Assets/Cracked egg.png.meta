@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cracked egg_0: -721335661585835598
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
