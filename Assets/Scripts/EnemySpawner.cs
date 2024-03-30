@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator Start()
     {
+        SpawnEnemy();
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
