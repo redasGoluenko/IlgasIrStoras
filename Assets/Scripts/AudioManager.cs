@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource enemyShootingSoundSource; // Reference to the AudioSource component for enemy shooting sound
     [SerializeField] private AudioSource enemySpawnerDestroySoundSource; // Reference to the AudioSource component for enemy death sound
     [SerializeField] private AudioSource enemySpawnSoundSource;
+    [SerializeField] private AudioSource tankIdleSoundSource;
 
     [Header("Audio Clips ( where the sounds go )")]
     public AudioClip driving; // Reference to the driving sound effect
@@ -31,12 +32,14 @@ public class AudioManager : MonoBehaviour
     public AudioClip enemyShooting; // Reference to the enemy shooting sound effect
     public AudioClip enemySpawnerDestroy;
     public AudioClip enemySpawn;
+    public AudioClip tankIdle;
 
     // Start is called before the first frame update
     void Start()
     {
         // Set the audio clip for the driving sound effect
         movingSoundSource.clip = driving;
+        tankIdleSoundSource.clip = tankIdle;
 
         // Set the audio clip for the background music and make it loop
         backgroundMusicSource.clip = background;
@@ -56,14 +59,20 @@ public class AudioManager : MonoBehaviour
             {
                 // Play the driving sound
                 movingSoundSource.Play();
+                tankIdleSoundSource.Stop(); // Stop tank idle sound when moving
             }
         }
         else
         {
             // Stop the driving sound if none of the keys are pressed
             movingSoundSource.Stop();
+            if (!tankIdleSoundSource.isPlaying) // Check if tank idle sound is not already playing
+            {
+                tankIdleSoundSource.Play(); // Play tank idle sound if it's not playing
+            }
         }
     }
+
     public void PlayShootingSound()
     {
         // Play the shooting sound
@@ -109,5 +118,5 @@ public class AudioManager : MonoBehaviour
     public void PlayEnemySpawnSound()
     {
         enemySpawnSoundSource.PlayOneShot(enemySpawn);
-    }   
+    }    
 }

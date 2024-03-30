@@ -20,8 +20,7 @@ public class PlayerController : MonoBehaviour
     private bool fullAuto = false;
     private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown
     private int randomValue;
-    private bool canFire = true; // Track if the player can fire
-    private bool isHeartbeatPlaying = false;  
+    private bool canFire = true; // Track if the player can fire 
 
     [Header("Player Stats")]
     public float moveSpeed;
