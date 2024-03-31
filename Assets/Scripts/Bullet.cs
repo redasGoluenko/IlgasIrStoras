@@ -33,10 +33,6 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if(collision.gameObject.CompareTag("EnemySpawner"))
-        {
-            Destroy(gameObject);
-        }
         else if(collision.gameObject.CompareTag("projectile"))
         {
             Destroy(gameObject, 3f);
