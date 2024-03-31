@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown
     private int randomValue;
     private bool canFire = true; // Track if the player can fire 
+    private bool homing = false;
 
     [Header("Player Stats")]
     public float moveSpeed;
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
             if (randomValue == 0)
             {
+                Debug.Log("Full Auto");
                 fullAuto = true;
                 // Start the coroutine to reset fullAuto after 10 seconds
                 if (powerupTimerCoroutine != null)
@@ -54,6 +56,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (randomValue == 1)
             {
+                Debug.Log("Speed Boost");
                 // Increase speed to 10f upon collision with a powerup
                 moveSpeed = 10f;
                 // Start the coroutine to reset speed after 10 seconds
@@ -63,8 +66,9 @@ public class PlayerController : MonoBehaviour
             }
             else if (randomValue == 2)
             {
+                Debug.Log("Bullet Speed Increased");
                 weapon.IncreaseFireForce(20);
-            }
+            }         
         }
         if(collision.gameObject.CompareTag("EnemyProjectile"))
         {
@@ -107,10 +111,10 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(0))
         {
-            weapon.Fire();
+            weapon.Fire(homing);
         }
 
-        if (Input.GetMouseButtonDown(1) && !speedBoostOnCooldown) // Check if speed boost is not on cooldown
+        if (Input.GetKeyDown(KeyCode.Space) && !speedBoostOnCooldown) // Check if speed boost is not on cooldown
         {
             audioManager.PlayDashingSound();
             StartCoroutine(ActivateSpeedBoost(20f, 0.075f));
@@ -131,6 +135,12 @@ public class PlayerController : MonoBehaviour
         speedBoostOnCooldown = false; // Reset speed boost cooldown
     }
 
+    IEnumerator DisableHomingAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        homing = false;
+    }
+
     //turns image so the image is facing the direction of movement
 
     void Move()
@@ -145,7 +155,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator FireWithDelay()
     {
         canFire = false; // Set canFire to false to prevent firing multiple shots quickly
-        weapon.Fire();
+        weapon.Fire(homing);
         yield return new WaitForSeconds(0.05f); // Adjust this value to control the firing rate
         canFire = true; // Set canFire to true to allow firing again after the delay
     }
