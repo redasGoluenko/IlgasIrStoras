@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource enemySpawnerDestroySoundSource; // Reference to the AudioSource component for enemy death sound
     [SerializeField] private AudioSource enemySpawnSoundSource;
     [SerializeField] private AudioSource tankIdleSoundSource;
+    [SerializeField] private AudioSource homingSoundSource;
 
     [Header("Audio Clips ( where the sounds go )")]
     public AudioClip driving; // Reference to the driving sound effect
@@ -33,13 +34,14 @@ public class AudioManager : MonoBehaviour
     public AudioClip enemySpawnerDestroy;
     public AudioClip enemySpawn;
     public AudioClip tankIdle;
+    public AudioClip homing;
 
     // Start is called before the first frame update
     void Start()
     {
         // Set the audio clip for the driving sound effect
         movingSoundSource.clip = driving;
-        tankIdleSoundSource.clip = tankIdle;
+        tankIdleSoundSource.clip = tankIdle;      
 
         // Set the audio clip for the background music and make it loop
         backgroundMusicSource.clip = background;
@@ -118,5 +120,9 @@ public class AudioManager : MonoBehaviour
     public void PlayEnemySpawnSound()
     {
         enemySpawnSoundSource.PlayOneShot(enemySpawn);
-    }    
+    }
+    public void PlayHomingSound()
+    {       
+        homingSoundSource.PlayOneShot(homing);
+    } 
 }

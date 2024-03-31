@@ -77,8 +77,8 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("projectile"))
         {
-            TakeDamage(5);
-            damageUI.TakeDamage(5, 100);
+            TakeDamage(1);
+            damageUI.TakeDamage(1, 100);
         }
         if(collision.gameObject.CompareTag("Enemy"))
         {
@@ -93,6 +93,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         ProcessInputs();
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            if(homing)
+            {
+                homing = false;
+            }
+            else
+            {
+                homing = true;
+            }
+        }
     }
 
     void FixedUpdate()

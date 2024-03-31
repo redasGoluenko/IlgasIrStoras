@@ -29,11 +29,10 @@ public class Weapon : MonoBehaviour
     public void FireHoming()
     {
         // Play the shooting sound
-        audioManager.PlayShootingSound();
+        audioManager.PlayHomingSound();
         GameObject projectile = Instantiate(homingBullet, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up, ForceMode2D.Impulse);
-        Destroy(projectile, 2f);
+        rb.AddForce(firePoint.up, ForceMode2D.Impulse);       
     }
     public void IncreaseFireForce(int amount)
     {
