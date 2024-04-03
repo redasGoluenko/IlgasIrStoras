@@ -19,6 +19,24 @@ public class Enemy : MonoBehaviour
         // Find the player object in the scene
         targetObject = GameObject.FindGameObjectWithTag("Player");
     }
+
+    void Shoot()
+    {
+        // Define the offset distance from the enemy where the projectile will spawn
+        float spawnOffset = 1.5f;
+
+        // Calculate the spawn position of the projectile slightly away from the enemy
+        Vector3 spawnPosition = transform.position + (targetObject.transform.position - transform.position).normalized * spawnOffset;
+
+        // Instantiate a projectile at the calculated spawn position
+        GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
+
+        // Calculate direction towards the player
+        Vector2 direction = (targetObject.transform.position - transform.position).normalized;
+
+        // Set velocity of the projectile
+        projectile.GetComponent<Rigidbody2D>().velocity = direction * 10f;
+    }
     //update mehod
     private void Update()
     {
@@ -54,24 +72,6 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-    void Shoot()
-    {
-        // Define the offset distance from the enemy where the projectile will spawn
-        float spawnOffset = 1.5f;
-
-        // Calculate the spawn position of the projectile slightly away from the enemy
-        Vector3 spawnPosition = transform.position + (targetObject.transform.position - transform.position).normalized * spawnOffset;
-
-        // Instantiate a projectile at the calculated spawn position
-        GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
-
-        // Calculate direction towards the player
-        Vector2 direction = (targetObject.transform.position - transform.position).normalized;
-
-        // Set velocity of the projectile
-        projectile.GetComponent<Rigidbody2D>().velocity = direction * 10f;
-    }
-
 
 
     private void OnCollisionEnter2D(Collision2D collision)

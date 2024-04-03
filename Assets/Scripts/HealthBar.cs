@@ -8,6 +8,10 @@ public class HealthBar : MonoBehaviour
 {
     public Slider slider;
 
+    public void SetHealth(int health)
+    {
+        slider.value = health;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +24,5 @@ public class HealthBar : MonoBehaviour
         
     }
 
-    public void SetHealth(int health)
-    {
-        slider.value = health;
-    }
+
 }
