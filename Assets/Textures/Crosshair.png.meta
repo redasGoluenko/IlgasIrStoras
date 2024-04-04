@@ -658,7 +658,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Crosshair_0: -2852443166016097488
+      Crosshair_1: 528818951868578185
+      Crosshair_10: 950562636800193526
+      Crosshair_11: -257747011960034945
+      Crosshair_12: 8767509506814873654
+      Crosshair_13: -61413287010502702
+      Crosshair_14: 2581442043942379279
+      Crosshair_15: -7183041898084206731
+      Crosshair_16: -6799825169884995487
+      Crosshair_17: -817943494567009269
+      Crosshair_18: -5770849793889026888
+      Crosshair_19: 8857195745595638931
+      Crosshair_2: 6965800085573315464
+      Crosshair_20: -4784343005399307117
+      Crosshair_21: 6113354752991033034
+      Crosshair_22: 1088661280405196833
+      Crosshair_3: 4247978643584613240
+      Crosshair_4: -4194325971657217467
+      Crosshair_5: -9023836216503336534
+      Crosshair_6: -435983140781873345
+      Crosshair_7: -2677397153437110735
+      Crosshair_8: 7296563296489766942
+      Crosshair_9: -8415294219466016076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    
     [Header ("Object References")]
     public GameObject projectilePrefab; // Reference to the projectile prefab
     public GameObject deathEffect; // Reference to the death effect prefab
