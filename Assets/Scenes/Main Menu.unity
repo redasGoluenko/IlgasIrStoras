@@ -1386,6 +1386,9 @@ MonoBehaviour:
   healthBar: {fileID: 970338144}
   damageUI: {fileID: 0}
   audioManager: {fileID: 283403142}
+  moveDirection: {x: 0, y: 0}
+  fullAuto: 0
+  canFire: 1
   moveSpeed: 5
   health: 100
 --- !u!50 &289546464
