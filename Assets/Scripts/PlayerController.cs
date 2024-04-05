@@ -10,17 +10,17 @@ public class PlayerController : MonoBehaviour
     public Weapon weapon;
     public HealthBar healthBar;
     public DamageUI damageUI;
-    Coroutine powerupTimerCoroutine;
+    public Coroutine powerupTimerCoroutine;
     public AudioManager audioManager;
 
-    private Vector2 moveDirection;
+    public Vector2 moveDirection;
     private Vector2 mousePosition;
 
 
-    private bool fullAuto = false;
+    public bool fullAuto = false;
     private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown
     private int randomValue;
-    private bool canFire = true; // Track if the player can fire 
+    public bool canFire = true; // Track if the player can fire 
     private bool homing = false;
 
     [Header("Player Stats")]
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     public void Start()
     {
-        healthBar.SetHealth(100);
+       healthBar.SetHealth(100);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
         mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    IEnumerator ActivateSpeedBoost(float newSpeed, float duration)
+    public IEnumerator ActivateSpeedBoost(float newSpeed, float duration)
     {
         speedBoostOnCooldown = true; // Set speed boost to cooldown
         float originalSpeed = moveSpeed;
@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
 
     //turns image so the image is facing the direction of movement
 
-    void Move()
+    public void Move()
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
 
@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = aimAngle;
     }
-    IEnumerator FireWithDelay()
+    public IEnumerator FireWithDelay()
     {
         canFire = false; // Set canFire to false to prevent firing multiple shots quickly
         weapon.Fire(homing);
@@ -171,7 +171,7 @@ public class PlayerController : MonoBehaviour
         canFire = true; // Set canFire to true to allow firing again after the delay
     }
 
-    IEnumerator PowerupTimer()
+    public IEnumerator PowerupTimer()
     {
         yield return new WaitForSeconds(10f); // Wait for 10 seconds
         fullAuto = false; // Reset fullAuto after 10 seconds
@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        audioManager.PlayPlayerHitSound();
+        //audioManager.PlayPlayerHitSound();
         health -= damage;
         healthBar.SetHealth(health);
         if (health <= 0)
@@ -189,8 +189,8 @@ public class PlayerController : MonoBehaviour
     }
     public void Die()
     {
-        audioManager.PlayPlayerDeathSound();
-        audioManager.StopBackgroundMusic();
+        //audioManager.PlayPlayerDeathSound();
+        //audioManager.StopBackgroundMusic();
         Destroy(gameObject);    
         //stop time
         Time.timeScale = 0;

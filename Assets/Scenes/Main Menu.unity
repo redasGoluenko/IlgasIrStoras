@@ -433,6 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 172831438787633922, guid: f009166811d7140469e8f01e0faeef1d, type: 3}
+  homingBullet: {fileID: 0}
   firePoint: {fileID: 1829963794}
   audioManager: {fileID: 283403142}
   fireForce: 10
@@ -1258,6 +1259,7 @@ MonoBehaviour:
   enemySpawnerDestroySoundSource: {fileID: 1014441900}
   enemySpawnSoundSource: {fileID: 1088360930}
   tankIdleSoundSource: {fileID: 1162225607}
+  homingSoundSource: {fileID: 0}
   driving: {fileID: 8300000, guid: 888d5f687e18a4f4f9f932963b477725, type: 3}
   background: {fileID: 8300000, guid: 2617024ac7c5aac4e94ca17dfc700b5c, type: 3}
   shooting: {fileID: 8300000, guid: b96c320eab135224fa4380c3ef0975e3, type: 3}
@@ -1271,6 +1273,7 @@ MonoBehaviour:
   enemySpawnerDestroy: {fileID: 8300000, guid: ff942cca605df104ebb8ff5de5e076f6, type: 3}
   enemySpawn: {fileID: 8300000, guid: 99ab1c337f0a4b148a833a4d67dc7798, type: 3}
   tankIdle: {fileID: 8300000, guid: d54f5d5670a518a45bf99dbe10103198, type: 3}
+  homing: {fileID: 0}
 --- !u!4 &283403143
 Transform:
   m_ObjectHideFlags: 0
@@ -2050,12 +2053,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400332016}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.0319992, y: -0.2890782, z: -12.233351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 404195285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &404195283
 GameObject:
@@ -2098,7 +2101,8 @@ Transform:
   m_LocalPosition: {x: 1.0319992, y: 0.2890782, z: 2.233351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 400332019}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419587243
@@ -5963,7 +5967,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 400332019}
   - {fileID: 289546466}
   - {fileID: 404195285}
   - {fileID: 28326242}

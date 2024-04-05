@@ -10,7 +10,7 @@ public class DamageUI : MonoBehaviour
     private float damagePercentage = 0;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         overlay.color = new Color(1, 1, 1, damagePercentage); // Set the initial alpha value to 0
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [Header("Audio Sources ( for adjusting sounds )")]
-    [SerializeField] private AudioSource movingSoundSource; // Reference to the AudioSource component for driving sound
+    [SerializeField] public AudioSource movingSoundSource; // Reference to the AudioSource component for driving sound
     [SerializeField] private AudioSource backgroundMusicSource; // Reference to the AudioSource component for background music
     [SerializeField] private AudioSource shootingSoundSource;
     [SerializeField] private AudioSource playerHitSoundSource;
@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource enemyShootingSoundSource; // Reference to the AudioSource component for enemy shooting sound
     [SerializeField] private AudioSource enemySpawnerDestroySoundSource; // Reference to the AudioSource component for enemy death sound
     [SerializeField] private AudioSource enemySpawnSoundSource;
-    [SerializeField] private AudioSource tankIdleSoundSource;
+    [SerializeField] public AudioSource tankIdleSoundSource;
     [SerializeField] private AudioSource homingSoundSource;
 
     [Header("Audio Clips ( where the sounds go )")]

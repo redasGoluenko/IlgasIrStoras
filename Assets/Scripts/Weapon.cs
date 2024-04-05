@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
         if (!homing)
         {
             // Play the shooting sound
-            audioManager.PlayShootingSound();
+            //audioManager.PlayShootingSound();
             GameObject projectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.velocity = firePoint.up * fireForce;
@@ -29,7 +29,7 @@ public class Weapon : MonoBehaviour
     public void FireHoming()
     {
         // Play the shooting sound
-        audioManager.PlayHomingSound();
+        //audioManager.PlayHomingSound();
         GameObject projectile = Instantiate(homingBullet, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up, ForceMode2D.Impulse);       
