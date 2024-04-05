@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
     [Header ("Object References")]
     public GameObject projectilePrefab; // Reference to the projectile prefab
     public GameObject deathEffect; // Reference to the death effect prefab
-    private GameObject targetObject; // Reference to the player object
+    public GameObject targetObject; // Reference to the player object
     public SpriteRenderer spriteRenderer; // Reference to the sprite renderer
     public AudioManager audioManager;
 
@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-    void Shoot()
+    public void Shoot()
     {
         audioManager.PlayEnemyShootingSound();
         // Define the offset distance from the enemy where the projectile will spawn

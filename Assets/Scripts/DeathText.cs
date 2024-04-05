@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeathText : MonoBehaviour
 {
-    private Renderer rendererComponent;
+    public Renderer rendererComponent;
 
     private void Start()
     {
@@ -15,7 +15,7 @@ public class DeathText : MonoBehaviour
         SetVisibility(false);
     }
 
-    private void Update()
+    public void Update()
     {
         // Check if the player object is destroyed
         if (PlayerObjectDestroyed())

@@ -94,5 +94,30 @@ public class PlayerTests
 
         // Assert
         Assert.AreEqual(originalSpeed, playerController.moveSpeed); // Ensure speed is reset after boost duration
-    }  
+    }
+    [UnityTest]
+    public IEnumerator IncreaseFireForce_FireForceIncreasesAndResetsAfterDelay()
+    {
+        // Arrange
+        GameObject weaponObject = new GameObject("Weapon");
+        Weapon weapon = weaponObject.AddComponent<Weapon>();
+        weapon.audioManager = new AudioManager(); // Mock audio manager
+        weapon.fireForce = 10f;
+        int amount = 5;
+
+        // Act
+        weapon.IncreaseFireForce(amount);
+
+        // Assert (check initial increase)
+        Assert.AreEqual(10f + amount, weapon.fireForce); // Ensure fire force increased immediately
+
+        // Wait for reset
+        yield return new WaitForSeconds(10.1f); // Wait for reset time
+
+        // Assert (check reset)
+        Assert.AreEqual(10f, weapon.fireForce); // Ensure fire force reset to initial value
+
+        // Cleanup
+        GameObject.Destroy(weaponObject);
+    }
 }
