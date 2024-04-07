@@ -12,6 +12,7 @@ TagManager:
   - Death Text
   - PlayButton
   - EnemyProjectile
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX

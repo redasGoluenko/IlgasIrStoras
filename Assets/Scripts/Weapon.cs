@@ -8,10 +8,12 @@ public class Weapon : MonoBehaviour
     public GameObject homingBullet;
     public Transform firePoint;
     public AudioManager audioManager;
+    public ShotsFiredCounter shotsFiredCounter;
 
     public float fireForce;
     public void Fire(bool homing)
     {
+        shotsFiredCounter.IncrementShotsFired();
         if (!homing)
         {
             // Play the shooting sound

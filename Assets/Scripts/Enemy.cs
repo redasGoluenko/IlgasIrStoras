@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public GameObject targetObject; // Reference to the player object
     public SpriteRenderer spriteRenderer; // Reference to the sprite renderer
     public AudioManager audioManager;
+    public KillCounter killCounter;
+    public ScoreCounter scoreCounter;
 
     [Header("Enemy Stats")]
     private int hitCount = 0; // The number of times the enemy has been hit
@@ -94,6 +96,9 @@ public class Enemy : MonoBehaviour
                 GameObject effectInstance = Instantiate(deathEffect, transform.position, Quaternion.identity); // Instantiate the death effect
                 Destroy(gameObject); // Destroy the enemy object
                 Destroy(effectInstance, 2.0f); // Destroy the death effect instance after 2 seconds (adjust as needed)
+                killCounter.IncrementKills();
+                scoreCounter.IncrementScore(10);
+
             }
             else
             {

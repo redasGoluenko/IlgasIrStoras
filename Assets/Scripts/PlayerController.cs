@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     public DamageUI damageUI;
     public Coroutine powerupTimerCoroutine;
     public AudioManager audioManager;
+    public DashCounter dashCounter;
+    public ShotsTakenCounter shotsTakenCounter;
+    public PowerupCounter powerupCounter;
+    public SpawnerDestroyedCounter spawnerDestroyedCounter;
 
     public Vector2 moveDirection;
     private Vector2 mousePosition;
@@ -33,6 +37,10 @@ public class PlayerController : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.CompareTag("EnemySpawner"))
+        {
+            spawnerDestroyedCounter.IncrementSpawnerDestroyedCount();
+        }
         if (collision.gameObject.CompareTag("Wall"))
         {
             // Stop player movement upon collision with a wall miau
@@ -40,6 +48,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Powerup"))
         {
+            powerupCounter.IncrementPowerupCount();
             audioManager.PlayPowerupPickupSound();
             randomValue = Random.Range(0, 3);
             // Destroy the powerup GameObject upon collision with a wall
@@ -77,6 +86,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("projectile"))
         {
+            shotsTakenCounter.IncrementShotsTaken();
             TakeDamage(1);
             damageUI.TakeDamage(1, 100);
         }
@@ -127,6 +137,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !speedBoostOnCooldown) // Check if speed boost is not on cooldown miau
         {
+            dashCounter.IncrementDashCounter();
             audioManager.PlayDashingSound();
             StartCoroutine(ActivateSpeedBoost(20f, 0.075f));
         }
@@ -197,5 +208,7 @@ public class PlayerController : MonoBehaviour
         // miaumiau
         // mur mur
         // -Juste
+        // miau
+        // -Redas
     }
 }
