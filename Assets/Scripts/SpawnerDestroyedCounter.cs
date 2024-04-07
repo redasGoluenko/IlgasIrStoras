@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SpawnerDestroyedCounter : MonoBehaviour
 {
-    private int spawnerDestroyedCount = 0;
+    public int spawnerDestroyedCount = 0;
     public Text spawnerDestroyedCountText;
     // Start is called before the first frame update
     void Start()

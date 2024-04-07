@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DashCounter : MonoBehaviour
 {
     public Text dashCounterText;
-    private int dashCounter = 0;
+    public int dashCounter = 0;
     // Start is called before the first frame update
     void Start()
     {

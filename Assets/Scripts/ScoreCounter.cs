@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour
 {
-    private int score = 0;
+    public int score = 0;
     public Text textMeshProText; // Reference to the Text component
     // Start is called before the first frame update
     void Start()

@@ -5,16 +5,16 @@ public class ElapsedTime : MonoBehaviour
 {
     public Text sessionTimeText; // Reference to the UI text element where you want to display the session time
 
-    private float startTime; // Variable to store the time when the session started
+    public float startTime; // Variable to store the time when the session started
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         startTime = Time.realtimeSinceStartup; // Record the start time of the session
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         // Calculate the elapsed time since the session started
         float elapsedTime = Time.realtimeSinceStartup - startTime;

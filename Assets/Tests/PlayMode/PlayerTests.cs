@@ -8,7 +8,7 @@ using UnityEngine.UI; // Import the UI namespace
 
 public class PlayerTests
 {
-    private PlayerController playerController;   
+    private PlayerController playerController;
     [SetUp]
     public void Setup()
     {
@@ -20,10 +20,10 @@ public class PlayerTests
         var healthBarObject = new GameObject();
         var healthBar = healthBarObject.AddComponent<HealthBar>();
         healthBar.slider = healthBarObject.AddComponent<UnityEngine.UI.Slider>();
-        playerController.healthBar = healthBar;       
+        playerController.healthBar = healthBar;
+
+        
     }
-
-
 
     //Unit test for game start up
     [UnityTest]
@@ -149,7 +149,6 @@ public class PlayerTests
 
        
     }
-
     [TearDown]
     public void Teardown()
     {

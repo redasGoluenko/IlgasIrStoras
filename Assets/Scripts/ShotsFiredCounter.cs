@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ShotsFiredCounter : MonoBehaviour
 {
-    private int shotsFired = 0;
+    public int shotsFired = 0;
     public Text textMeshProText; // Reference to the Text component
     // Start is called before the first frame update
     void Start()

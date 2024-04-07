@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PowerupCounter : MonoBehaviour
 {
-    private int powerupCount = 0;
+    public int powerupCount = 0;
     public Text powerupCountText;
     // Start is called before the first frame update
     void Start()

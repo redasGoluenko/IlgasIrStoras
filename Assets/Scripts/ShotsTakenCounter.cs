@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ShotsTakenCounter : MonoBehaviour
 {
     public Text shotsTakenText; // Reference to the UI text element where you want to display the shots taken
-    private int shotsTakenCount = 0;
+    public int shotsTakenCount = 0;
     // Start is called before the first frame update
     void Start()
     {
