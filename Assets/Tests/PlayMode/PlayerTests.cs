@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
@@ -22,6 +23,33 @@ public class PlayerTests
         playerController.healthBar = healthBar;       
     }
 
+
+
+    //Unit test for game start up
+    [UnityTest]
+    public IEnumerator PlayerStartHealthTest()
+    { 
+        Assert.AreEqual(100, playerController.health);
+        yield return null;
+        
+    }
+    [UnityTest]
+    public IEnumerator PlayerDeathTest()
+    {
+        var initialHealth = playerController.health;
+        var damage = initialHealth;
+
+        playerController.TakeDamage(damage);
+      
+        yield return new WaitForEndOfFrame();
+       
+        if (playerController != null)
+        {          
+            Assert.Fail("Player object was not destroyed.");
+        }
+        else { Assert.Pass(); }
+        
+    }
     [UnityTest]
     public IEnumerator PlayerDamageTest()
     {      
@@ -32,24 +60,19 @@ public class PlayerTests
 
         Assert.AreEqual(initialHealth - damage, playerController.health);
         yield return null;
-    }
-
-    [UnityTest]
-    public IEnumerator PlayerDeathTest()
-    {
-        var initialHealth = playerController.health;
-        var damage = initialHealth;
-
-        playerController.TakeDamage(damage);
-      
-        yield return null;
        
-        if (playerController != null)
-        {          
-            Assert.Fail("Player object was not destroyed.");
-        }
-        else { Assert.Pass(); }
-        
+    }
+    //unit test for for firewithdela
+    [UnityTest]
+    public IEnumerator FireWithDelay_CanFireIsTrueWhileFiring()
+    {
+        playerController.canFire = false;
+
+        // Act
+        playerController.FireWithDelay();
+        yield return null;
+        // Assert
+        Assert.IsFalse(playerController.canFire);
     }
     //implement a test for the PowerupTimer method
     [UnityTest]
@@ -62,6 +85,7 @@ public class PlayerTests
         yield return new WaitForSeconds(10);
        
         Assert.IsFalse(playerController.fullAuto);
+        
     }
     // Add this test method to your PlayerTests class
     [UnityTest]
@@ -76,6 +100,7 @@ public class PlayerTests
         Assert.AreEqual(initialMoveDirection.y * playerController.moveSpeed, playerController.rb.velocity.y);
 
         yield return null;
+        
     }
     // Add this test method to your PlayerTests class
     [UnityTest]
@@ -94,6 +119,8 @@ public class PlayerTests
 
         // Assert
         Assert.AreEqual(originalSpeed, playerController.moveSpeed); // Ensure speed is reset after boost duration
+
+       
     }
     [UnityTest]
     public IEnumerator IncreaseFireForce_FireForceIncreasesAndResetsAfterDelay()
@@ -119,5 +146,16 @@ public class PlayerTests
 
         // Cleanup
         GameObject.Destroy(weaponObject);
+
+       
+    }
+
+    [TearDown]
+    public void Teardown()
+    {
+        if (playerController != null)
+        {
+            GameObject.Destroy(playerController.gameObject);
+        }
     }
 }

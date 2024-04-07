@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
 
     public bool fullAuto = false;
-    private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown
+    private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown miau
     private int randomValue;
     public bool canFire = true; // Track if the player can fire 
     private bool homing = false;
@@ -31,11 +31,11 @@ public class PlayerController : MonoBehaviour
     {
        healthBar.SetHealth(100);
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            // Stop player movement upon collision with a wall
+            // Stop player movement upon collision with a wall miau
             rb.velocity = Vector2.zero;
         }
         if (collision.gameObject.CompareTag("Powerup"))
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
    
 
-    // Update is called once per frame
+    // Update is called once per frame miau
     void Update()
     {
         ProcessInputs();
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
             weapon.Fire(homing);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !speedBoostOnCooldown) // Check if speed boost is not on cooldown
+        if (Input.GetKeyDown(KeyCode.Space) && !speedBoostOnCooldown) // Check if speed boost is not on cooldown miau
         {
             audioManager.PlayDashingSound();
             StartCoroutine(ActivateSpeedBoost(20f, 0.075f));
@@ -165,9 +165,9 @@ public class PlayerController : MonoBehaviour
     }
     public IEnumerator FireWithDelay()
     {
-        canFire = false; // Set canFire to false to prevent firing multiple shots quickly
+        canFire = false; // Set canFire to false to prevent firing multiple shots quickly miau
         weapon.Fire(homing);
-        yield return new WaitForSeconds(0.05f); // Adjust this value to control the firing rate
+        yield return new WaitForSeconds(0.05f); // Adjust this value to control the firing rate miau
         canFire = true; // Set canFire to true to allow firing again after the delay
     }
 
@@ -175,7 +175,7 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(10f); // Wait for 10 seconds
         fullAuto = false; // Reset fullAuto after 10 seconds
-        moveSpeed = 5f; // Reset speed to 5f after 10 seconds
+        moveSpeed = 5f; // Reset speed to 5f after 10 seconds miau
     }
     public void TakeDamage(int damage)
     {
@@ -194,5 +194,8 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);    
         //stop time
         Time.timeScale = 0;
+        // miaumiau
+        // mur mur
+        // -Juste
     }
 }
