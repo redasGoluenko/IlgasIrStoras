@@ -5,9 +5,11 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UI; // Import the UI namespace
 
+//Test class for testing DamageUI
 public class DamageUITests
 {
     private DamageUI damageUI;
+    //SetUp method for setting up necessary test environment
     [SetUp]
     public void Setup()
     {
@@ -16,6 +18,7 @@ public class DamageUITests
         Image overlay = damageUIObject.AddComponent<Image>();
         damageUI.overlay = overlay;
     }
+    // Test method to verify if alpha value is updated correctly after taking damage
     [Test]
     public void TakeDamage_AlphaValueUpdatedCorrectly()
     {
@@ -29,7 +32,7 @@ public class DamageUITests
         float expectedAlpha = (float)damage / (float)maxHealth;
         Assert.AreEqual(expectedAlpha, damageUI.overlay.color.a);
     }
-
+    // Test method to verify if alpha value is updated correctly after gaining health
     [Test]
     public void GainHealth_AlphaValueUpdatedCorrectly()
     {

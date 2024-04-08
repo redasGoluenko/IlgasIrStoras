@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UI; // Import the UI namespace
 
+//Test class for DeathText
 public class DeathTextTests
 {
-    private DeathText deathText;   
-
+    private DeathText deathText;
+    // Test to verify that DeathText is visible when player is destroyed
     [Test]
     public void DeathText_VisibleWhenPlayerDestroyed()
     {
@@ -21,6 +22,7 @@ public class DeathTextTests
         // Assert
         Assert.IsTrue(rendererComponent.enabled);       
     }
+    // Test to verify that DeathText is invisible when player exists
     [Test]
     public void DeathText_InvisibleWhenPlayerExists()
     {
@@ -40,5 +42,4 @@ public class DeathTextTests
         Assert.IsTrue(rendererComponent.enabled);
 
     }
-
 }
