@@ -7,7 +7,7 @@ using UnityEngine.TestTools;
 using UnityEngine.UI; // Import the UI namespace
 
 //Parameterized Tests vor various methods that can be test this way
-public class ParameterizedTests
+public class ParameeterizedTests
 {
     private DashCounter dashCounter;
     private ElapsedTime elapsedTimeScript;
