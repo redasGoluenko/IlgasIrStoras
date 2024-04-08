@@ -6,7 +6,8 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UI; // Import the UI namespace
 
-public class ParameeterizedTests
+//Parameterized Tests vor various methods that can be test this way
+public class ParameterizedTests
 {
     private DashCounter dashCounter;
     private ElapsedTime elapsedTimeScript;
@@ -17,6 +18,7 @@ public class ParameeterizedTests
     private ShotsTakenCounter shotsTakenCounterScript;
     private SpawnerDestroyedCounter spawnerDestroyedCounterScript;
 
+    // Setup method to initialize the test environment before each test case
     [SetUp]
     public void Setup()
     {
@@ -114,6 +116,7 @@ public class ParameeterizedTests
         // Check if the displayed kills count matches the expected value
         Assert.AreEqual(kills, killCounterScript.kills);
     }
+    // Parameterized test for PowerUpCounter
     [TestCase(0)]
     [TestCase(1)]
     [TestCase(5)]
@@ -193,6 +196,7 @@ public class ParameeterizedTests
         // Check if the displayed spawners destroyed count matches the expected value
         Assert.AreEqual(spawnersDestroyed, spawnerDestroyedCounterScript.spawnerDestroyedCount);
     }
+    //Teardown method for cleaning up resources after each test
     [TearDown]
     public void TearDown()
     {

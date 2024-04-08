@@ -4,11 +4,15 @@ using System.Reflection;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
-using UnityEngine.UI; // Import the UI namespace
+using UnityEngine.UI;
 
+
+//Unit Tests for PlayerController class
 public class PlayerTests
 {
     private PlayerController playerController;
+
+    //SetUp method for setting up necessary test environment
     [SetUp]
     public void Setup()
     {
@@ -33,6 +37,7 @@ public class PlayerTests
         yield return null;
         
     }
+    //Unit test for player death
     [UnityTest]
     public IEnumerator PlayerDeathTest()
     {
@@ -50,6 +55,7 @@ public class PlayerTests
         else { Assert.Pass(); }
         
     }
+    //Unit test for if player can take damage
     [UnityTest]
     public IEnumerator PlayerDamageTest()
     {      
@@ -62,7 +68,7 @@ public class PlayerTests
         yield return null;
        
     }
-    //unit test for for firewithdela
+    //unit test for for firewithdelay
     [UnityTest]
     public IEnumerator FireWithDelay_CanFireIsTrueWhileFiring()
     {
@@ -74,7 +80,7 @@ public class PlayerTests
         // Assert
         Assert.IsFalse(playerController.canFire);
     }
-    //implement a test for the PowerupTimer method
+    //Unit test for the PowerupTimer method
     [UnityTest]
     public IEnumerator PowerupTimerTest()
     {
@@ -87,7 +93,7 @@ public class PlayerTests
         Assert.IsFalse(playerController.fullAuto);
         
     }
-    // Add this test method to your PlayerTests class
+    //Unit test for player movement
     [UnityTest]
     public IEnumerator MoveTest()
     {     
@@ -102,7 +108,7 @@ public class PlayerTests
         yield return null;
         
     }
-    // Add this test method to your PlayerTests class
+    // Unit test for SpeedBoost power-up
     [UnityTest]
     public IEnumerator ActivateSpeedBoostTest()
     {
@@ -122,6 +128,7 @@ public class PlayerTests
 
        
     }
+    //Unit test for fire force increase
     [UnityTest]
     public IEnumerator IncreaseFireForce_FireForceIncreasesAndResetsAfterDelay()
     {
@@ -149,6 +156,7 @@ public class PlayerTests
 
        
     }
+    //Teardown method for cleaning up resources after each test
     [TearDown]
     public void Teardown()
     {
