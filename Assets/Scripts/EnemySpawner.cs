@@ -16,7 +16,15 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy();
         }
     }
-
+   
+    //if the spawner collides with a projectile it gets destroyed
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
     // Spawn an enemy to the right of this object
     public void SpawnEnemy()
     {
@@ -28,13 +36,5 @@ public class EnemySpawner : MonoBehaviour
             Instantiate(enemyPrefab, transform.position + Vector3.left, Quaternion.identity);
         else if (random == 2)
             Instantiate(enemyPrefab, transform.position + Vector3.right, Quaternion.identity);
-    }
-    //if the spawner collides with a projectile it gets destroyed
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
     }
 }
