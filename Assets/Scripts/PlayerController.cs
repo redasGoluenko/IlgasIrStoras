@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header ("Object references")]
     public Camera sceneCamera;
     public Rigidbody2D rb;
     public Weapon weapon;
     public HealthBar healthBar;
     public DamageUI damageUI;
     Coroutine powerupTimerCoroutine;
+    public AudioManager audioManager;
 
     private Vector2 moveDirection;
     private Vector2 mousePosition;
 
+
     private bool fullAuto = false;
     private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown
     private int randomValue;
-    private bool canFire = true; // Track if the player can fire
+    private bool canFire = true; // Track if the player can fire 
+    private bool homing = false;
 
+    [Header("Player Stats")]
     public float moveSpeed;
     public int health = 100;
 
@@ -35,12 +40,14 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Powerup"))
         {
+            audioManager.PlayPowerupPickupSound();
             randomValue = Random.Range(0, 3);
             // Destroy the powerup GameObject upon collision with a wall
             Destroy(collision.gameObject);
 
             if (randomValue == 0)
             {
+                Debug.Log("Full Auto");
                 fullAuto = true;
                 // Start the coroutine to reset fullAuto after 10 seconds
                 if (powerupTimerCoroutine != null)
@@ -49,6 +56,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (randomValue == 1)
             {
+                Debug.Log("Speed Boost");
                 // Increase speed to 10f upon collision with a powerup
                 moveSpeed = 10f;
                 // Start the coroutine to reset speed after 10 seconds
@@ -58,8 +66,9 @@ public class PlayerController : MonoBehaviour
             }
             else if (randomValue == 2)
             {
+                Debug.Log("Bullet Speed Increased");
                 weapon.IncreaseFireForce(20);
-            }
+            }         
         }
         if(collision.gameObject.CompareTag("EnemyProjectile"))
         {
@@ -68,8 +77,8 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("projectile"))
         {
-            TakeDamage(5);
-            damageUI.TakeDamage(5, 100);
+            TakeDamage(1);
+            damageUI.TakeDamage(1, 100);
         }
         if(collision.gameObject.CompareTag("Enemy"))
         {
@@ -84,7 +93,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         ProcessInputs();
-
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            if(homing)
+            {
+                homing = false;
+            }
+            else
+            {
+                homing = true;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -103,11 +122,12 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(0))
         {
-            weapon.Fire();
+            weapon.Fire(homing);
         }
 
-        if (Input.GetMouseButtonDown(1) && !speedBoostOnCooldown) // Check if speed boost is not on cooldown
+        if (Input.GetKeyDown(KeyCode.Space) && !speedBoostOnCooldown) // Check if speed boost is not on cooldown
         {
+            audioManager.PlayDashingSound();
             StartCoroutine(ActivateSpeedBoost(20f, 0.075f));
         }
 
@@ -126,6 +146,12 @@ public class PlayerController : MonoBehaviour
         speedBoostOnCooldown = false; // Reset speed boost cooldown
     }
 
+    IEnumerator DisableHomingAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        homing = false;
+    }
+
     //turns image so the image is facing the direction of movement
 
     void Move()
@@ -140,7 +166,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator FireWithDelay()
     {
         canFire = false; // Set canFire to false to prevent firing multiple shots quickly
-        weapon.Fire();
+        weapon.Fire(homing);
         yield return new WaitForSeconds(0.05f); // Adjust this value to control the firing rate
         canFire = true; // Set canFire to true to allow firing again after the delay
     }
@@ -153,6 +179,7 @@ public class PlayerController : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        audioManager.PlayPlayerHitSound();
         health -= damage;
         healthBar.SetHealth(health);
         if (health <= 0)
@@ -162,11 +189,10 @@ public class PlayerController : MonoBehaviour
     }
     public void Die()
     {
+        audioManager.PlayPlayerDeathSound();
+        audioManager.StopBackgroundMusic();
         Destroy(gameObject);    
         //stop time
         Time.timeScale = 0;
     }
-
-    
-
 }

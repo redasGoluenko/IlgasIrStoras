@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,16 +5,34 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public GameObject bullet;
+    public GameObject homingBullet;
     public Transform firePoint;
-    public float fireForce;
-    public void Fire()
-    {
-        GameObject projectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+    public AudioManager audioManager;
 
-        // Destroy the projectile after 5 seconds
-        Destroy(projectile, 2f);
+    public float fireForce;
+    public void Fire(bool homing)
+    {
+        if (!homing)
+        {
+            // Play the shooting sound
+            audioManager.PlayShootingSound();
+            GameObject projectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
+            Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+            rb.velocity = firePoint.up * fireForce;
+            Destroy(projectile, 2f);
+        }
+        else
+        {
+            FireHoming();
+        }
+    }
+    public void FireHoming()
+    {
+        // Play the shooting sound
+        audioManager.PlayHomingSound();
+        GameObject projectile = Instantiate(homingBullet, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up, ForceMode2D.Impulse);       
     }
     public void IncreaseFireForce(int amount)
     {
