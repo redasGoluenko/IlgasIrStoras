@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private int randomValue;
     private bool canFire = true; // Track if the player can fire 
     private bool homing = false;
+    private bool damaged = false;
 
     [Header("Player Stats")]
     public float moveSpeed;
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("EnemyProjectile"))
         {
+            StartCoroutine(EnableDamagedForDuration(0.05f));
             TakeDamage(10);
             damageUI.TakeDamage(10, 100);
         }
@@ -120,6 +122,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !speedBoostOnCooldown) // Check if speed boost is not on cooldown
         {
+            if(damaged)
+            {
+                Heal(10);
+            }                   
             audioManager.PlayDashingSound();
             StartCoroutine(ActivateSpeedBoost(20f, 0.075f));
         }
@@ -144,7 +150,13 @@ public class PlayerController : MonoBehaviour
     homing = true; // Enable homing
     yield return new WaitForSeconds(duration); // Wait for the specified duration
     homing = false; // Disable homing after the duration
-}
+} 
+    IEnumerator EnableDamagedForDuration(float duration)
+    {
+        damaged = true;
+        yield return new WaitForSeconds(duration);
+        damaged = false;
+    }
 
     //turns image so the image is facing the direction of movement
 
@@ -164,7 +176,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.05f); // Adjust this value to control the firing rate
         canFire = true; // Set canFire to true to allow firing again after the delay
     }
-
     IEnumerator PowerupTimer()
     {
         yield return new WaitForSeconds(10f); // Wait for 10 seconds
@@ -180,6 +191,12 @@ public class PlayerController : MonoBehaviour
         {
             Die();
         }
+    }
+    public void Heal(int amount)
+    {
+        health += amount;
+        healthBar.SetHealth(health);
+        damageUI.GainHealth(amount, 100);
     }
     public void Die()
     {
