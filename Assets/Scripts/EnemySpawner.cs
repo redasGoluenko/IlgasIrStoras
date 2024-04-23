@@ -5,7 +5,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
 
-    public float spawnInterval = 10f;
+    public float spawnInterval = 1f;
 
     IEnumerator Start()
     {

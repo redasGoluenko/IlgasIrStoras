@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public DamageUI damageUI;
     Coroutine powerupTimerCoroutine;
     public AudioManager audioManager;
+    private int CartonCount;
+    public int CartonMax = 1;
 
     private Vector2 moveDirection;
     private Vector2 mousePosition;
@@ -38,6 +40,15 @@ public class PlayerController : MonoBehaviour
         {
             // Stop player movement upon collision with a wall
             rb.velocity = Vector2.zero;
+        }
+        if (collision.gameObject.CompareTag("NextLevel"))
+        {
+            CartonCount++;
+            Destroy(collision.gameObject);
+            if (CartonCount == CartonMax)
+            {
+                   SceneControl.Instance.NextScene();
+            }
         }
         if (collision.gameObject.CompareTag("Powerup"))
         {
@@ -92,6 +103,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(EnableDamagedForDuration(0.05f));
             TakeDamage(10);
             damageUI.TakeDamage(10, 100);
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("projectile"))
         {
@@ -110,7 +122,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessInputs();
+        ProcessInputs(); 
     }
 
     void FixedUpdate()
