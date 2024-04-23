@@ -17,11 +17,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 mousePosition;
 
 
-    private bool fullAuto = false;
+    public bool fullAuto = false;
     private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown
     private int randomValue;
     private bool canFire = true; // Track if the player can fire 
-    private bool homing = false;
+    public bool homing = false;
     private bool damaged = false;
 
     [Header("Player Stats")]
@@ -54,6 +54,10 @@ public class PlayerController : MonoBehaviour
                 if (powerupTimerCoroutine != null)
                     StopCoroutine(powerupTimerCoroutine);
                 powerupTimerCoroutine = StartCoroutine(PowerupTimer());
+
+                moveSpeed = 5f;
+                weapon.fireForce = 10;
+                homing = false;
             }
             else if (randomValue == 1)
             {
@@ -64,11 +68,19 @@ public class PlayerController : MonoBehaviour
                 if (powerupTimerCoroutine != null)
                     StopCoroutine(powerupTimerCoroutine);
                 powerupTimerCoroutine = StartCoroutine(PowerupTimer());
+
+                fullAuto = false;
+                weapon.fireForce = 10;
+                homing = false;
             }
             else if (randomValue == 2)
             {
                 Debug.Log("Bullet Speed Increased");
                 weapon.IncreaseFireForce(20);
+
+                fullAuto = false;
+                moveSpeed = 5f;
+                homing = false;
             }     
             else if(randomValue == 3)
             {
