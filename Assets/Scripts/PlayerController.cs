@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Powerup"))
         {
             audioManager.PlayPowerupPickupSound();
-            randomValue = Random.Range(0, 3);
+            randomValue = Random.Range(0, 4);
             // Destroy the powerup GameObject upon collision with a wall
             Destroy(collision.gameObject);
 
@@ -68,7 +68,11 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Bullet Speed Increased");
                 weapon.IncreaseFireForce(20);
-            }         
+            }     
+            else if(randomValue == 3)
+            {
+                StartCoroutine(EnableHomingForDuration(10f));
+            }
         }
         if(collision.gameObject.CompareTag("EnemyProjectile"))
         {
@@ -93,17 +97,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         ProcessInputs();
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            if(homing)
-            {
-                homing = false;
-            }
-            else
-            {
-                homing = true;
-            }
-        }
     }
 
     void FixedUpdate()
@@ -146,11 +139,12 @@ public class PlayerController : MonoBehaviour
         speedBoostOnCooldown = false; // Reset speed boost cooldown
     }
 
-    IEnumerator DisableHomingAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        homing = false;
-    }
+    IEnumerator EnableHomingForDuration(float duration)
+{
+    homing = true; // Enable homing
+    yield return new WaitForSeconds(duration); // Wait for the specified duration
+    homing = false; // Disable homing after the duration
+}
 
     //turns image so the image is facing the direction of movement
 
