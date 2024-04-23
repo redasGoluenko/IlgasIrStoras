@@ -27,11 +27,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip playerHit; // Reference to the death sound effect
     public AudioClip powerupPickup; //Reference to the powerup pickup
     public AudioClip dashing;
-    public AudioClip playerDeath;
     public AudioClip enemyDeath;
     public AudioClip enemyHit;
     public AudioClip enemyShooting; // Reference to the enemy shooting sound effect
     public AudioClip enemySpawnerDestroy;
+    public AudioClip playerDeath;
     public AudioClip enemySpawn;
     public AudioClip tankIdle;
     public AudioClip homing;
@@ -75,15 +75,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayShootingSound()
-    {
-        // Play the shooting sound
-        shootingSoundSource.PlayOneShot(shooting);
-    }
-    public void PlayPlayerHitSound()
-    {
-        playerHitSoundSource.PlayOneShot(playerHit);
-    }
     public void PlayPowerupPickupSound()
     {
         powerupPickupSoundSource.PlayOneShot(powerupPickup);
@@ -92,14 +83,19 @@ public class AudioManager : MonoBehaviour
     {
         dashingSoundSource.PlayOneShot(dashing);
     }
-    public void PlayPlayerDeathSound()
-    {
-        playerDeathSoundSource.PlayOneShot(playerDeath);
-    }
     //make a method that would stop the background music
     public void StopBackgroundMusic()
     {
         backgroundMusicSource.Stop();
+    }
+    public void PlayShootingSound()
+    {
+        // Play the shooting sound
+        shootingSoundSource.PlayOneShot(shooting);
+    }
+    public void PlayPlayerHitSound()
+    {
+        playerHitSoundSource.PlayOneShot(playerHit);
     }
     public void PlayEnemyDeathSound()
     {
@@ -120,6 +116,10 @@ public class AudioManager : MonoBehaviour
     public void PlayEnemySpawnSound()
     {
         enemySpawnSoundSource.PlayOneShot(enemySpawn);
+    }
+    public void PlayPlayerDeathSound()
+    {
+        playerDeathSoundSource.PlayOneShot(playerDeath);
     }
     public void PlayHomingSound()
     {       
