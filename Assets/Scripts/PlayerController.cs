@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
         {
             CartonCount++;
             Destroy(collision.gameObject);
+            audioManager.PlayCartonPickupSound();
             if (CartonCount == CartonMax)
             {
                    SceneControl.Instance.NextScene();

@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource enemySpawnSoundSource;
     [SerializeField] private AudioSource tankIdleSoundSource;
     [SerializeField] private AudioSource homingSoundSource;
+    [SerializeField] private AudioSource cartonPickupSoundSource;
 
     [Header("Audio Clips ( where the sounds go )")]
     public AudioClip driving; // Reference to the driving sound effect
@@ -35,6 +36,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip enemySpawn;
     public AudioClip tankIdle;
     public AudioClip homing;
+    public AudioClip cartonPickup;
 
     // Start is called before the first frame update
     void Start()
@@ -125,4 +127,8 @@ public class AudioManager : MonoBehaviour
     {       
         homingSoundSource.PlayOneShot(homing);
     } 
+    public void PlayCartonPickupSound()
+    {
+        cartonPickupSoundSource.PlayOneShot(cartonPickup);
+    }
 }
