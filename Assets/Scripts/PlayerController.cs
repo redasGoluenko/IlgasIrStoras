@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     public Weapon weapon;
     public HealthBar healthBar;
     public DamageUI damageUI;
-    Coroutine powerupTimerCoroutine;
     public AudioManager audioManager;
+    Coroutine powerupTimerCoroutine;
 
     private Vector2 moveDirection;
     private Vector2 mousePosition;
@@ -182,6 +182,16 @@ public class PlayerController : MonoBehaviour
         fullAuto = false; // Reset fullAuto after 10 seconds
         moveSpeed = 5f; // Reset speed to 5f after 10 seconds
     }
+    public void Die()
+    {
+        // start death sound
+        audioManager.PlayPlayerDeathSound();
+        // stops background music
+        audioManager.StopBackgroundMusic();
+        Destroy(gameObject);
+        //stops time
+        Time.timeScale = 0;
+    }
     public void TakeDamage(int damage)
     {
         audioManager.PlayPlayerHitSound();
@@ -197,13 +207,5 @@ public class PlayerController : MonoBehaviour
         health += amount;
         healthBar.SetHealth(health);
         damageUI.GainHealth(amount, 100);
-    }
-    public void Die()
-    {
-        audioManager.PlayPlayerDeathSound();
-        audioManager.StopBackgroundMusic();
-        Destroy(gameObject);    
-        //stop time
-        Time.timeScale = 0;
     }
 }
