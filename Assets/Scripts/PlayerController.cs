@@ -145,12 +145,6 @@ public class PlayerController : MonoBehaviour
         speedBoostOnCooldown = false; // Reset speed boost cooldown
     }
 
-    IEnumerator EnableHomingForDuration(float duration)
-{
-    homing = true; // Enable homing
-    yield return new WaitForSeconds(duration); // Wait for the specified duration
-    homing = false; // Disable homing after the duration
-} 
     IEnumerator EnableDamagedForDuration(float duration)
     {
         damaged = true;
@@ -158,6 +152,12 @@ public class PlayerController : MonoBehaviour
         damaged = false;
     }
 
+    IEnumerator EnableHomingForDuration(float duration)
+    {
+        homing = true; // Enable homing
+        yield return new WaitForSeconds(duration); // Wait for the specified duration
+        homing = false; // Disable homing after the duration
+    }
     //turns image so the image is facing the direction of movement
 
     void Move()
@@ -169,18 +169,19 @@ public class PlayerController : MonoBehaviour
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = aimAngle;
     }
+ 
+    IEnumerator PowerupTimer()
+    {
+        yield return new WaitForSeconds(10f); // Wait for 10 seconds
+        fullAuto = false; // Reset fullAuto after 10 seconds
+        moveSpeed = 5f; // Reset speed to 5f after 10 seconds
+    }
     IEnumerator FireWithDelay()
     {
         canFire = false; // Set canFire to false to prevent firing multiple shots quickly
         weapon.Fire(homing);
         yield return new WaitForSeconds(0.05f); // Adjust this value to control the firing rate
         canFire = true; // Set canFire to true to allow firing again after the delay
-    }
-    IEnumerator PowerupTimer()
-    {
-        yield return new WaitForSeconds(10f); // Wait for 10 seconds
-        fullAuto = false; // Reset fullAuto after 10 seconds
-        moveSpeed = 5f; // Reset speed to 5f after 10 seconds
     }
     public void Die()
     {
