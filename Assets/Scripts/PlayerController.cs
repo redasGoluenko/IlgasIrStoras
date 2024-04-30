@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDirection;
     private Vector2 mousePosition;
 
+    [Header("Player Stats")]
+    public float moveSpeed;
+    public int health = 100;
 
     private bool fullAuto = false;
     private bool speedBoostOnCooldown = false; // Track if speed boost is on cooldown
@@ -23,10 +26,6 @@ public class PlayerController : MonoBehaviour
     private bool canFire = true; // Track if the player can fire 
     private bool homing = false;
     private bool damaged = false;
-
-    [Header("Player Stats")]
-    public float moveSpeed;
-    public int health = 100;
 
     public void Start()
     {
@@ -75,12 +74,7 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(EnableHomingForDuration(10f));
             }
         }
-        if(collision.gameObject.CompareTag("EnemyProjectile"))
-        {
-            StartCoroutine(EnableDamagedForDuration(0.05f));
-            TakeDamage(10);
-            damageUI.TakeDamage(10, 100);
-        }
+        //cases for all possible damages that a player can take
         if (collision.gameObject.CompareTag("projectile"))
         {
             TakeDamage(1);
@@ -90,7 +84,13 @@ public class PlayerController : MonoBehaviour
         {
             TakeDamage(50);
             damageUI.TakeDamage(50, 100);
-        }   
+        }
+        if (collision.gameObject.CompareTag("EnemyProjectile"))
+        {
+            StartCoroutine(EnableDamagedForDuration(0.05f));
+            TakeDamage(10);
+            damageUI.TakeDamage(10, 100);
+        }
     }
 
    
@@ -158,12 +158,11 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(duration); // Wait for the specified duration
         homing = false; // Disable homing after the duration
     }
-    //turns image so the image is facing the direction of movement
 
+    //turns image so the image is facing the direction of movement
     void Move()
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
-
         //rotate player to face mouse
         Vector2 aimDirection = mousePosition - rb.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
@@ -203,6 +202,7 @@ public class PlayerController : MonoBehaviour
             Die();
         }
     }
+    //to set the starting health of a player (not a power-up)
     public void Heal(int amount)
     {
         health += amount;

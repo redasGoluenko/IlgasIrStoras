@@ -433,6 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 172831438787633922, guid: f009166811d7140469e8f01e0faeef1d, type: 3}
+  homingBullet: {fileID: 0}
   firePoint: {fileID: 1829963794}
   audioManager: {fileID: 283403142}
   fireForce: 10
@@ -1258,19 +1259,21 @@ MonoBehaviour:
   enemySpawnerDestroySoundSource: {fileID: 1014441900}
   enemySpawnSoundSource: {fileID: 1088360930}
   tankIdleSoundSource: {fileID: 1162225607}
+  homingSoundSource: {fileID: 0}
   driving: {fileID: 8300000, guid: 888d5f687e18a4f4f9f932963b477725, type: 3}
   background: {fileID: 8300000, guid: 2617024ac7c5aac4e94ca17dfc700b5c, type: 3}
   shooting: {fileID: 8300000, guid: b96c320eab135224fa4380c3ef0975e3, type: 3}
   playerHit: {fileID: 8300000, guid: 6144b77cc03ec93488469b12279051c3, type: 3}
   powerupPickup: {fileID: 8300000, guid: c71c43d8a6658c54ab4939b41173cb0e, type: 3}
   dashing: {fileID: 8300000, guid: 3f04b6f71ff4ffe409a3c35fbb82ee11, type: 3}
-  playerDeath: {fileID: 8300000, guid: d01d71ebf1d973844b55198bbe559ccc, type: 3}
   enemyDeath: {fileID: 8300000, guid: 926cea5c34a10474d9ebb2734e9fecff, type: 3}
   enemyHit: {fileID: 8300000, guid: acfd068f13e57094baf6bcfdb4471f27, type: 3}
   enemyShooting: {fileID: 8300000, guid: 7fa07bb0d9a55c44ca7319769b99676f, type: 3}
   enemySpawnerDestroy: {fileID: 8300000, guid: ff942cca605df104ebb8ff5de5e076f6, type: 3}
+  playerDeath: {fileID: 8300000, guid: d01d71ebf1d973844b55198bbe559ccc, type: 3}
   enemySpawn: {fileID: 8300000, guid: 99ab1c337f0a4b148a833a4d67dc7798, type: 3}
   tankIdle: {fileID: 8300000, guid: d54f5d5670a518a45bf99dbe10103198, type: 3}
+  homing: {fileID: 0}
 --- !u!4 &283403143
 Transform:
   m_ObjectHideFlags: 0
@@ -2342,7 +2345,7 @@ Transform:
   m_GameObject: {fileID: 487645339}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.17, y: -0.58538896, z: 0.0708304}
+  m_LocalPosition: {x: 6.96, y: -0.48, z: 0.0708304}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3347,7 +3350,7 @@ Transform:
   m_GameObject: {fileID: 1014933470}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.68, y: -1.7221525, z: 0.0708304}
+  m_LocalPosition: {x: -8.68, y: -1.56, z: 0.0708304}
   m_LocalScale: {x: 1, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4332,7 +4335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -14.1299, y: 0.08469963}
+  m_AnchoredPosition: {x: -12.7, y: 0.6}
   m_SizeDelta: {x: 36.813, y: 27.9097}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1450872144

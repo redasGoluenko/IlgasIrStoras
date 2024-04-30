@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//class for player crosshair implementation
 public class FollowMouse : MonoBehaviour
 {
     // Start is called before the first frame update

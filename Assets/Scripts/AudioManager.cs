@@ -26,10 +26,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip shooting; // Reference to the shooting sound effect
     public AudioClip playerHit; // Reference to the death sound effect
     public AudioClip powerupPickup; //Reference to the powerup pickup
-    public AudioClip dashing;
-    public AudioClip enemyDeath;
-    public AudioClip enemyHit;
     public AudioClip enemyShooting; // Reference to the enemy shooting sound effect
+    public AudioClip dashing; // reference to player dash sound
+    public AudioClip enemyDeath;// reference to enemy death sound 
+    public AudioClip enemyHit;//.... self explanatory 
     public AudioClip enemySpawnerDestroy;
     public AudioClip playerDeath;
     public AudioClip enemySpawn;
@@ -74,7 +74,7 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
-
+    // some are/could be redundant (to discuss in the future)
     public void PlayPowerupPickupSound()
     {
         powerupPickupSoundSource.PlayOneShot(powerupPickup);
