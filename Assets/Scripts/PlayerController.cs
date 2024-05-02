@@ -53,6 +53,9 @@ public class PlayerController : MonoBehaviour
                 if (powerupTimerCoroutine != null)
                     StopCoroutine(powerupTimerCoroutine);
                 powerupTimerCoroutine = StartCoroutine(PowerupTimer());
+                homing = false;
+                moveSpeed = 5f;
+                weapon.fireForce = 10;
             }
             else if (randomValue == 1)
             {
@@ -63,11 +66,17 @@ public class PlayerController : MonoBehaviour
                 if (powerupTimerCoroutine != null)
                     StopCoroutine(powerupTimerCoroutine);
                 powerupTimerCoroutine = StartCoroutine(PowerupTimer());
+                weapon.fireForce = 10;
+                homing = false;
+                fullAuto = false;
             }
             else if (randomValue == 2)
             {
                 Debug.Log("Bullet Speed Increased");
                 weapon.IncreaseFireForce(20);
+                homing = false;
+                fullAuto = false;
+                moveSpeed = 5f;
             }         
         }
         if(collision.gameObject.CompareTag("EnemyProjectile"))
