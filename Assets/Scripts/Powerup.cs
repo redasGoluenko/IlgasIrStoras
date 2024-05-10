@@ -21,8 +21,18 @@ public class Powerup : MonoBehaviour
     }
 
     // Update is called once per frame
+    //updates for each power-up in initiation 
     void Update()
     {
+        if (weapon.fireForce > 10)
+        {
+            bulletSpeed.enabled = true;
+            fullAuto.enabled = false;
+            speedBoost.enabled = false;
+            homing.enabled = false;
+        }
+        else { bulletSpeed.enabled = false; }
+
         if (playerController.fullAuto) { 
             fullAuto.enabled = true;  
             speedBoost.enabled = false;
@@ -30,14 +40,6 @@ public class Powerup : MonoBehaviour
             bulletSpeed.enabled = false;
         }
         else { fullAuto.enabled = false;  }
-
-        if (playerController.moveSpeed == 10) {
-            speedBoost.enabled = true; 
-            homing.enabled = false;
-            bulletSpeed.enabled = false;
-            fullAuto.enabled = false;
-        }
-        else { speedBoost.enabled = false;  }
 
         if (playerController.homing) {
             homing.enabled = true; 
@@ -47,12 +49,13 @@ public class Powerup : MonoBehaviour
         }
         else { homing.enabled = false;  }
 
-        if (weapon.fireForce > 10) { 
-            bulletSpeed.enabled = true; 
-            fullAuto.enabled = false;
-            speedBoost.enabled = false;
+        if (playerController.moveSpeed == 10)
+        {
+            speedBoost.enabled = true;
             homing.enabled = false;
+            bulletSpeed.enabled = false;
+            fullAuto.enabled = false;
         }
-        else { bulletSpeed.enabled = false;  }
+        else { speedBoost.enabled = false; }
     }
 }

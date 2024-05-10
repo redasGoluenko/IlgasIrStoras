@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      klipartz.com(4)_0: 2925266635653249740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

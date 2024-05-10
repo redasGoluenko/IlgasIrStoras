@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneControl : MonoBehaviour
 {
+    //should be readonly whenever possible
     public static SceneControl Instance;
     private void Awake()
     {
