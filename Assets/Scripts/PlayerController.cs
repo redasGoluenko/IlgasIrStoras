@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public AudioManager audioManager;
     private int CartonCount;
     public int CartonMax = 1;
+    public int orbMax = 8;
+    public int orbCount = 0;
 
     private Vector2 moveDirection;
     private Vector2 mousePosition;
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private bool canFire = true; // Track if the player can fire 
     public bool homing = false;
     private bool damaged = false;
+    public bool toxic = false;
 
     [Header("Player Stats")]
     public float moveSpeed;
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviour
     public void Start()
     {
         healthBar.SetHealth(100);
+        StartCoroutine(TakeDamageOverTime(0.025f));
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -50,6 +54,12 @@ public class PlayerController : MonoBehaviour
             {
                    SceneControl.Instance.NextScene();
             }
+        }
+        if(collision.gameObject.CompareTag("Exit"))
+        {
+            Debug.Log("Game Over");
+            Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
         }
         if (collision.gameObject.CompareTag("Powerup"))
         {
@@ -123,7 +133,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessInputs(); 
+        ProcessInputs();  
+        if(orbCount == orbMax)
+        {
+            SceneControl.Instance.NextScene();
+        }
     }
 
     void FixedUpdate()
@@ -217,6 +231,25 @@ public class PlayerController : MonoBehaviour
             Die();
         }
     }
+    public void TakeDamageToxic(int damage)
+    {   
+        health -= damage;
+        healthBar.SetHealth(health);
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+    // Coroutine to take damage over time
+    IEnumerator TakeDamageOverTime(float interval)
+    {
+        while (toxic)
+        {
+            yield return new WaitForSeconds(interval); // Wait for the specified interval
+            TakeDamageToxic(1); // Call TakeDamage function with 1 damage
+            damageUI.TakeDamage(1, 100);
+        }
+    }
     public void Heal(int amount)
     {
         health += amount;
@@ -230,5 +263,8 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);    
         //stop time
         Time.timeScale = 0;
+        //go to scene called main menu
+        SceneControl.Instance.LoadScene("Main Menu");
+        Time.timeScale = 1;
     }
 }

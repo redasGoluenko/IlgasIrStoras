@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fb61100ec6bacbe4dbbda0dd8718188b
+guid: 5d49611cb72b1f049a68e8a0caef05c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8812458263435439131
-    second: klipartz.com(2)_0
+      213: 6330969168363139030
+    second: Radar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: klipartz.com(2)_0
+      name: Radar_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 1187
-        height: 746
+        x: 1121
+        y: 614
+        width: 1266
+        height: 1252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1c6606a9142c4a70800000000000000
-      internalID: 8812458263435439131
+      spriteID: 6df2c3c6aee1cd750800000000000000
+      internalID: 6330969168363139030
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      klipartz.com(2)_0: 8812458263435439131
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

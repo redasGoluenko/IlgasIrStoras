@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fb61100ec6bacbe4dbbda0dd8718188b
+guid: ac326fa09094eac49bd720b4f8d45ebb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8812458263435439131
-    second: klipartz.com(2)_0
+      213: 3980602223719964145
+    second: orb-png-25381_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: klipartz.com(2)_0
+      name: orb-png-25381_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 1187
-        height: 746
+        x: 18
+        y: 30
+        width: 471
+        height: 466
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1c6606a9142c4a70800000000000000
-      internalID: 8812458263435439131
+      spriteID: 1fd55f0e1a0fd3730800000000000000
+      internalID: 3980602223719964145
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      klipartz.com(2)_0: 8812458263435439131
+      orb-png-25381_0: 3980602223719964145
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
