@@ -1,0 +1,450 @@
+fileFormatVersion: 2
+guid: 80ce334ae15269d478f38e03e162277d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6728242343716700775
+    second: pngkey.com-victory-png-1205917_0
+  - first:
+      213: 2004551604475411762
+    second: pngkey.com-victory-png-1205917_1
+  - first:
+      213: 5106426418016690420
+    second: pngkey.com-victory-png-1205917_2
+  - first:
+      213: -5673163440470204486
+    second: pngkey.com-victory-png-1205917_3
+  - first:
+      213: -853980784271789320
+    second: pngkey.com-victory-png-1205917_4
+  - first:
+      213: 124517563004120317
+    second: pngkey.com-victory-png-1205917_5
+  - first:
+      213: 4027589899562132687
+    second: pngkey.com-victory-png-1205917_6
+  - first:
+      213: 257112500392956191
+    second: pngkey.com-victory-png-1205917_7
+  - first:
+      213: 7415158597495621805
+    second: pngkey.com-victory-png-1205917_8
+  - first:
+      213: -6290655729372317940
+    second: pngkey.com-victory-png-1205917_9
+  - first:
+      213: -4949603192682746102
+    second: pngkey.com-victory-png-1205917_10
+  - first:
+      213: 5573324335581209586
+    second: pngkey.com-victory-png-1205917_11
+  - first:
+      213: -6110089399832475176
+    second: pngkey.com-victory-png-1205917_12
+  - first:
+      213: -1075061787435134603
+    second: pngkey.com-victory-png-1205917_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 74
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d36047c3b70a2a0800000000000000
+      internalID: -6728242343716700775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2
+        width: 58
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d32be401991db10800000000000000
+      internalID: 2004551604475411762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 2
+        width: 39
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f02e8da5cbadd640800000000000000
+      internalID: 5106426418016690420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_3
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 53
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf5a0a98efd441b0800000000000000
+      internalID: -5673163440470204486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_4
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 101
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f27874500d0624f0800000000000000
+      internalID: -853980784271789320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_5
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 129
+        width: 111
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc682750106ab100800000000000000
+      internalID: 124517563004120317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_6
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 0
+        width: 54
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc42a50bcafd4e730800000000000000
+      internalID: 4027589899562132687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_7
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 0
+        width: 54
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f111c35f472719300800000000000000
+      internalID: 257112500392956191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_8
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2
+        width: 37
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da809ec057fe7e660800000000000000
+      internalID: 7415158597495621805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_9
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 2
+        width: 69
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07bc7681f913b8a0800000000000000
+      internalID: -6290655729372317940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_10
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 66
+        width: 59
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0f6101de1a7f4bb0800000000000000
+      internalID: -4949603192682746102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_11
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 2
+        width: 79
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f3ab5854fc685d40800000000000000
+      internalID: 5573324335581209586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_12
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d90b11401a943ba0800000000000000
+      internalID: -6110089399832475176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-victory-png-1205917_13
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2
+        width: 38
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5711550100d9411f0800000000000000
+      internalID: -1075061787435134603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     public void Start()
     {
+        Cursor.visible = false;
         healthBar.SetHealth(100);
         StartCoroutine(TakeDamageOverTime(0.20f));
     }

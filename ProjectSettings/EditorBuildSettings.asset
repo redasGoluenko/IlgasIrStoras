@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victory Screen.unity
     guid: 9553d829e3b28ef4fb0e3fb9b72bb824
+  - enabled: 1
+    path: Assets/Scenes/Contrats.unity
+    guid: 0a9ddcea780dd38419494f40866e8be6
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
