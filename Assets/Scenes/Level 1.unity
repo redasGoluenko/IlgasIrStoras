@@ -675,8 +675,11 @@ MonoBehaviour:
   damageUI: {fileID: 632876108}
   audioManager: {fileID: 1066655998}
   CartonMax: 1
+  orbMax: 8
+  orbCount: 0
   fullAuto: 0
   homing: 0
+  toxic: 0
   moveSpeed: 5
   health: 100
 --- !u!61 &100274551
@@ -1377,7 +1380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7437799255572095890, guid: ae98bf48ac651b3469a0c2a1cb6cb544, type: 3}
+  m_Sprite: {fileID: 5667321274958799641, guid: aa15070594a903d449bf53efa4e7b8d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4225,6 +4228,7 @@ MonoBehaviour:
   tankIdleSoundSource: {fileID: 803771924}
   homingSoundSource: {fileID: 1563345389}
   cartonPickupSoundSource: {fileID: 2058551543}
+  orbDestroy: {fileID: 0}
   driving: {fileID: 8300000, guid: 888d5f687e18a4f4f9f932963b477725, type: 3}
   background: {fileID: 8300000, guid: 657aff668d4cca64292400479d784f52, type: 3}
   shooting: {fileID: 8300000, guid: b96c320eab135224fa4380c3ef0975e3, type: 3}
@@ -4240,6 +4244,7 @@ MonoBehaviour:
   tankIdle: {fileID: 8300000, guid: d54f5d5670a518a45bf99dbe10103198, type: 3}
   homing: {fileID: 8300000, guid: 4632df9ff5e10ea4dae967acefd11be9, type: 3}
   cartonPickup: {fileID: 8300000, guid: 77388aae7a0a4d4438d8e42acdd43a13, type: 3}
+  orbDestroySound: {fileID: 0}
 --- !u!4 &1066655999
 Transform:
   m_ObjectHideFlags: 0
