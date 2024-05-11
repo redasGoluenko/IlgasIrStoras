@@ -20,6 +20,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource tankIdleSoundSource;
     [SerializeField] private AudioSource homingSoundSource;
     [SerializeField] private AudioSource cartonPickupSoundSource;
+    [SerializeField] private AudioSource orbDestroy;
 
     [Header("Audio Clips ( where the sounds go )")]
     public AudioClip driving; // Reference to the driving sound effect
@@ -37,6 +38,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip tankIdle;
     public AudioClip homing;
     public AudioClip cartonPickup;   
+    public AudioClip orbDestroySound;
 
     // Start is called before the first frame update
     void Start()
@@ -130,6 +132,10 @@ public class AudioManager : MonoBehaviour
     public void PlayCartonPickupSound()
     {
         cartonPickupSoundSource.PlayOneShot(cartonPickup);
+    }
+    public void PlayOrbDestroySound()
+    {
+        orbDestroy.PlayOneShot(orbDestroySound);
     }
     
 }

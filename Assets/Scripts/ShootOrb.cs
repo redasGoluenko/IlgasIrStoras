@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShootOrb : MonoBehaviour
 {
+    public AudioManager audioManager;
     public PlayerController playerController;
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -11,6 +12,7 @@ public class ShootOrb : MonoBehaviour
         {
             // Destroy the orb GameObject upon collision with a wall
             Destroy(gameObject);
+            audioManager.PlayOrbDestroySound();
             playerController.Heal(12);
             playerController.orbCount++;
         }
