@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public void Start()
     {
         healthBar.SetHealth(100);
-        StartCoroutine(TakeDamageOverTime(0.025f));
+        StartCoroutine(TakeDamageOverTime(0.20f));
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -44,6 +44,14 @@ public class PlayerController : MonoBehaviour
         {
             // Stop player movement upon collision with a wall
             rb.velocity = Vector2.zero;
+        }
+        if(collision.gameObject.CompareTag("ShootOrb"))
+        {
+            Die();
+        }
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            Die();
         }
         if (collision.gameObject.CompareTag("NextLevel"))
         {
@@ -220,6 +228,10 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(10f); // Wait for 10 seconds
         fullAuto = false; // Reset fullAuto after 10 seconds
         moveSpeed = 5f; // Reset speed to 5f after 10 seconds
+    }
+    IEnumerator DeathScreen()
+    {
+        yield return new WaitForSeconds(10f); // Wait for 10 seconds
     }
     public void TakeDamage(int damage)
     {

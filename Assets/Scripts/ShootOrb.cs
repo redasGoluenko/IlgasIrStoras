@@ -8,13 +8,18 @@ public class ShootOrb : MonoBehaviour
     public PlayerController playerController;
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("projectile"))
+        if (collision.gameObject.CompareTag("projectile")) 
         {
             // Destroy the orb GameObject upon collision with a wall
             Destroy(gameObject);
             audioManager.PlayOrbDestroySound();
             playerController.Heal(12);
             playerController.orbCount++;
+        }
+        else
+        {
+            audioManager.PlayOrbDestroySound();
+            Destroy(gameObject);
         }
     }
     // Start is called before the first frame update
