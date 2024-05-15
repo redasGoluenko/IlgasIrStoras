@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1261,6 +1261,7 @@ MonoBehaviour:
   tankIdleSoundSource: {fileID: 1162225607}
   homingSoundSource: {fileID: 0}
   cartonPickupSoundSource: {fileID: 0}
+  orbDestroy: {fileID: 0}
   driving: {fileID: 8300000, guid: 888d5f687e18a4f4f9f932963b477725, type: 3}
   background: {fileID: 8300000, guid: 2617024ac7c5aac4e94ca17dfc700b5c, type: 3}
   shooting: {fileID: 8300000, guid: b96c320eab135224fa4380c3ef0975e3, type: 3}
@@ -1276,6 +1277,7 @@ MonoBehaviour:
   tankIdle: {fileID: 8300000, guid: d54f5d5670a518a45bf99dbe10103198, type: 3}
   homing: {fileID: 0}
   cartonPickup: {fileID: 0}
+  orbDestroySound: {fileID: 0}
 --- !u!4 &283403143
 Transform:
   m_ObjectHideFlags: 0

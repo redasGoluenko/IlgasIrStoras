@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Game Over");
             Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
         }
         if (collision.gameObject.CompareTag("Powerup"))
         {
