@@ -4,7 +4,7 @@ using System.Reflection;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
-using UnityEngine.UI; // Import the UI namespace
+using UnityEngine.UI; 
 
 //Parameterized Tests vor various methods that can be test this way
 public class ParameeterizedTests
@@ -78,16 +78,10 @@ public class ParameeterizedTests
     [TestCase(3665, "01:01:05")]
     public void ElapsedTimeTest(float elapsedTime, string expectedTimeString)
     {
-        // Set the start time of the session
         elapsedTimeScript.Start();
-
-        // Set the current time to the given elapsed time
         elapsedTimeScript.Update();
 
-        // Simulate the passage of time by updating the session time text directly
         UpdateSessionTime(elapsedTime);
-
-        // Check if the displayed session time matches the expected string
         Assert.AreEqual("Session Time: " + expectedTimeString, elapsedTimeScript.sessionTimeText.text);
     }
     // Method to simulate the passage of time by updating session time text directly
@@ -107,13 +101,10 @@ public class ParameeterizedTests
     [TestCase(10)]
     public void KillCounterTest(int kills)
     {
-        // Set the kills count
         for (int i = 0; i < kills; i++)
         {
             killCounterScript.IncrementKills();
         }
-
-        // Check if the displayed kills count matches the expected value
         Assert.AreEqual(kills, killCounterScript.kills);
     }
     // Parameterized test for PowerUpCounter
@@ -123,13 +114,10 @@ public class ParameeterizedTests
     [TestCase(10)]
     public void PowerUpCounterTest(int powerUps)
     {
-        // Set the kills count
         for (int i = 0; i < powerUps; i++)
         {
             PowerUpCounterScript.IncrementPowerupCount();
         }
-
-        // Check if the displayed kills count matches the expected value
         Assert.AreEqual(powerUps, PowerUpCounterScript.powerupCount);
     }
     // Parameterized test for ScoreCounter
@@ -139,13 +127,9 @@ public class ParameeterizedTests
     [TestCase(10, 10)]
     public void ScoreCounterTest(int initialScore, int incrementAmount)
     {
-        // Set the initial score count
         scoreCounterScript.score = initialScore;
-
-        // Increment the score by the specified amount
         scoreCounterScript.IncrementScore(incrementAmount);
 
-        // Check if the displayed score matches the expected value
         Assert.AreEqual(initialScore + incrementAmount, scoreCounterScript.score);
     }
     // Parameterized test for ShotsFiredCounter
@@ -155,13 +139,11 @@ public class ParameeterizedTests
     [TestCase(10)]
     public void ShotsFiredCounterTest(int shotsFired)
     {
-        // Set the shots fired count
         for (int i = 0; i < shotsFired; i++)
         {
             shotsFiredCounterScript.IncrementShotsFired();
         }
 
-        // Check if the displayed shots fired count matches the expected value
         Assert.AreEqual(shotsFired, shotsFiredCounterScript.shotsFired);
     }
     // Parameterized test for ShotsTakenCounter
@@ -171,13 +153,10 @@ public class ParameeterizedTests
     [TestCase(10)]
     public void ShotsTakenCounterTest(int shotsTaken)
     {
-        // Set the shots taken count
         for (int i = 0; i < shotsTaken; i++)
         {
             shotsTakenCounterScript.IncrementShotsTaken();
         }
-
-        // Check if the displayed shots taken count matches the expected value
         Assert.AreEqual(shotsTaken, shotsTakenCounterScript.shotsTakenCount);
     }
     // Parameterized test for SpawnerDestroyedCounter
@@ -187,13 +166,10 @@ public class ParameeterizedTests
     [TestCase(10)]
     public void SpawnerDestroyedCounterTest(int spawnersDestroyed)
     {
-        // Set the spawners destroyed count
         for (int i = 0; i < spawnersDestroyed; i++)
         {
             spawnerDestroyedCounterScript.IncrementSpawnerDestroyedCount();
         }
-
-        // Check if the displayed spawners destroyed count matches the expected value
         Assert.AreEqual(spawnersDestroyed, spawnerDestroyedCounterScript.spawnerDestroyedCount);
     }
     //Teardown method for cleaning up resources after each test

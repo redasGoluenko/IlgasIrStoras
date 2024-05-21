@@ -135,7 +135,7 @@ public class PlayerTests
         // Arrange
         GameObject weaponObject = new GameObject("Weapon");
         Weapon weapon = weaponObject.AddComponent<Weapon>();
-        weapon.audioManager = new AudioManager(); // Mock audio manager
+      //  weapon.audioManager = new AudioManager(); // Mock audio manager
         weapon.fireForce = 10f;
         int amount = 5;
 
