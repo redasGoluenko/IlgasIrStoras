@@ -15,13 +15,14 @@ public class Enemy : MonoBehaviour
     public BossHealthBar bossHealthBar;
 
     [Header("Enemy Stats")]
+    public bool boss = false;
     private int hitCount = 0; // The number of times the enemy has been hit
     private Color hitColor = Color.red; // The color to change to when hit
     private float shootTimer = 0f;
     public float shootCooldown = 2f;
     public int health = 10; // The amount of health the enemy has
     public float bulletSpeed = 10f; // The speed of the projectile
-    public bool boss = false;
+   
 
     //start method
     private void Start()
@@ -84,24 +85,6 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-    void Shoot()
-    {
-        audioManager.PlayEnemyShootingSound();
-        // Define the offset distance from the enemy where the projectile will spawn
-        float spawnOffset = 4f;
-
-        // Calculate the spawn position of the projectile slightly away from the enemy
-        Vector3 spawnPosition = transform.position + (targetObject.transform.position - transform.position).normalized * spawnOffset;
-
-        // Instantiate a projectile at the calculated spawn position
-        GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
-
-        // Calculate direction towards the player
-        Vector2 direction = (targetObject.transform.position - transform.position).normalized;
-
-        // Set velocity of the projectile
-        projectile.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
-    }
     void ShootNuke()
     {
         audioManager.PlayEnemyShootingSound();
@@ -120,6 +103,25 @@ public class Enemy : MonoBehaviour
         // Set velocity of the projectile
         projectile.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
     }
+    void Shoot()
+    {
+        audioManager.PlayEnemyShootingSound();
+        // Define the offset distance from the enemy where the projectile will spawn
+        float spawnOffset = 4f;
+
+        // Calculate the spawn position of the projectile slightly away from the enemy
+        Vector3 spawnPosition = transform.position + (targetObject.transform.position - transform.position).normalized * spawnOffset;
+
+        // Instantiate a projectile at the calculated spawn position
+        GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
+
+        // Calculate direction towards the player
+        Vector2 direction = (targetObject.transform.position - transform.position).normalized;
+
+        // Set velocity of the projectile
+        projectile.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+    }
+
 
 
 
