@@ -1,0 +1,1169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Pathfinding.AIDestinationSetter" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAABAAAAIAAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Behaviors\AIDestinationSetter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Patrol" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIAAAAAQAAAAAAAAgAAAAAAAAAAABAAAABAEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Behaviors\Patrol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AIBase" Collapsed="true">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACRNCJoAiqJghFUksACgY4KKAgJUoKAJEJWSjQAADKA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AI\AIBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AILerp" Collapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>A0RNgINAgCRkwEEEspCGawKCEAAZoaAIEJRCBRBAKEg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AI\AILerp.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pathfinding.AIPath" Collapsed="true">
+    <Position X="8.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAlCMBAgiYEQAEADpACKAKDAAAAgSAIAIBA5BBAAAg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AI\AIPath.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pathfinding.Seeker" Collapsed="true">
+    <Position X="18.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQBPAKSAgQGAAAAAoIAKAAALAAAQIAYAAACAAEgAAEQ=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AI\Seeker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AstarColor" Collapsed="true">
+    <Position X="56.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAEAAAQAAAABAMCAAAFDAAgAAAAACICACAgAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.NNConstraint" Collapsed="true">
+    <Position X="3.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAEIAACAAAAAAKACABAAAEoAIE=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.PathNNConstraint" Collapsed="true">
+    <Position X="3.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.GraphUpdateObject" Collapsed="true">
+    <Position X="67.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBAAAAgIQRIAAAAgAIIAAEAAAIDBCEACAAIKAAAIRAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AstarData" Collapsed="true">
+    <Position X="58.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCoBVAAR0QIQACAAAAAECAQgCAIGQDAEAQgSMIABAEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AstarData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AstarSplines" Collapsed="true">
+    <Position X="67.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAIAAAAgAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AstarMath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.VectorMath" Collapsed="true">
+    <Position X="62" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIAAggAAAEBAAIgGAAA0YBBiKBAGIAgQASIYABBAQA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AstarMath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AstarMath" Collapsed="true">
+    <Position X="60.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAACAAICAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AstarMath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Polygon" Collapsed="true">
+    <Position X="69" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAABEQAAAAAAAAAAAAAAAAAEAYAAAAAEABAAABA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AstarMath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.GraphUpdateScene" Collapsed="true">
+    <Position X="32.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAOAAiIQLoAAAABAAAAAAAAAJCDAAALAAIAEAAERGA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\GraphUpdateScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.GraphUpdateShape" Collapsed="true">
+    <Position X="55" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAhCAAAgAAIAQgAAAAAAAAAAAAAAIAAAAAgAQgAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\GraphUpdateShape.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AnimationLink" Collapsed="true">
+    <Position X="36.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAIAAAAgCAIAAAAAAAAAEAAgAQIAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\AnimationLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AstarDebugger" Collapsed="true">
+    <Position X="21" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIABBGAAKDiAAACIQAAYAAACgAEGIAIBCGkAFAhggE=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\AstarDebugger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AutoRepathPolicy" Collapsed="true">
+    <Position X="69" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAABAAEAAAABAHAAAAgAACAAAAABAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\AutoRepathPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.BinaryHeap" Collapsed="true">
+    <Position X="56.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIAAAgAAACAAQEAAQAABAAAEAAAgAAAACAABARAUAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\BinaryHeap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.EditorResourceHelper" Collapsed="true">
+    <Position X="65.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAACAAAAAAAAAAAAAABACAAAAAAAACCCIAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\EditorResourceHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.GraphEditorBase" Collapsed="true">
+    <Position X="58.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\GraphEditorBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.GraphModifier" Collapsed="true">
+    <Position X="34.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQBAABAAAAABAIAAAAgAACBAAACAAJIBIBAAQIGCEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\GraphModifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.GraphUpdateProcessor" Collapsed="true">
+    <Position X="69" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAAEAqAggAEAAgEAAEAQgEACAAAAAAwAAwAAIAAAAGA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\GraphUpdateProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.GraphUtilities" Collapsed="true">
+    <Position X="58.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\GraphUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.HierarchicalGraph" Collapsed="true">
+    <Position X="62" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEACABEJCCAAQAIAAAYIAARgAhAEBBYQEAABSQAAg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\HierarchicalGraph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.NodeLink" Collapsed="true">
+    <Position X="34.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIEACACgDAAAAAAIAACBAAAAAACAAAEAIAQAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\NodeLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.NodeLink2" Collapsed="true">
+    <Position X="36.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAEAAICARIAgAECIABChhAAAAAiIAAIBIACgAAACAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\NodeLink2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.NodeLink3Node" Collapsed="true">
+    <Position X="13.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAABAAQAIAAAAAAAAAAAAAAAAAAAAAAEQ=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\NodeLink3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.NodeLink3" Collapsed="true">
+    <Position X="39" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAEAAICARIAgAECIABChAAAAAAiIAAIBIACgAAACAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\NodeLink3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.PathPool" Collapsed="true">
+    <Position X="60.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAQAAACCAAAAQgAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\PathPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.PathProcessor" Collapsed="true">
+    <Position X="62" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAQAwgAIBACAAAIAABBBACAYAAAAQAkIoCAAAAAAAg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\PathProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.PathReturnQueue" Collapsed="true">
+    <Position X="63.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAACAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\PathReturnQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.ThreadControlQueue" Collapsed="true">
+    <Position X="69" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gARUAIAEgAAAAADACAAAAAAAQACAAGAABAAEAAIADgA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\ThreadControlQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.WorkItemProcessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgAAAACEACAAAAEQAgAIAAAAAAgAAAAAAQAEAgA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\WorkItemProcessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Pathfinding.GraphNode" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgaD5AEEggEgIBQAABQiIjYBKAhCgQgAAAgDAYAJEIY=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Nodes\GraphNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.MeshNode" Collapsed="true">
+    <Position X="8.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAoAEAAAUAAAAAABAAAjAAAAAAAAAAIBACAAABABA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Nodes\GraphNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.DefaultITraversalProvider" Collapsed="true">
+    <Position X="60.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Path.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Path" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQhDL2oBkGBDVSCAlRFWAIJQIAsERlBAQEAEANIBAIA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Path.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pathfinding.PathNode" Collapsed="true">
+    <Position X="58.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAFAAAABgAAAAEAAQAACwCAAIQAAIGEAAAAQ=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\PathHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.PathHandler" Collapsed="true">
+    <Position X="55" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAQAgAAEAgAAAIIAABAAAAIAAAAAAAQAAAAAAAIAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\PathHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.TargetMover" Collapsed="true">
+    <Position X="67.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAACARAAAAIAAAAAAAAAAAAAAQAACgAAAAgAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\TargetMover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.NavGraph" Collapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YIwFAAgkQQAEAQIAgaBoBiCEgAAEAgAIAQAAMAAAAAo=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Base.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pathfinding.GraphCollision" Collapsed="true">
+    <Position X="56.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEgAAAgEAAAQAwQAQIIEAADAQAEBAAEAIggAAgAIgBA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Base.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.GridGraph" Collapsed="true">
+    <Position X="3" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wBiXiEyEQONQEyKBQ5DJAnEGmCmMAgHk0hAptAAgIyg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\GridGenerator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pathfinding.NavmeshBase" Collapsed="true">
+    <Position X="5.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ZQgFYRlkcAIAFAIJIgAZAhlIhpJMACqWGAAhBIAAQAg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\NavmeshBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pathfinding.NavMeshGraph" Collapsed="true">
+    <Position X="5.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAAFEAKAAAAEAAACAAgACABAAAACAEIAABAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\NavMeshGenerator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pathfinding.GridNode" Collapsed="true">
+    <Position X="11" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAEAAAEAJhhQABAAAiIAKAACAiACAhgAAAAMAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\NodeClasses\GridNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.GridNodeBase" Collapsed="true">
+    <Position X="11" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAoACAAAEkYBQAABAEAjAIYABAAAAAIQgiAAABARg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\NodeClasses\GridNodeBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.PointNode" Collapsed="true">
+    <Position X="13.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAoAEAAAEAIAAAABAAAjIAAAAAAgAAIgACAAAJAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\NodeClasses\PointNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.TriangleMeshNode" Collapsed="true">
+    <Position X="8.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEgAAVgIBQQAAAAAAIAIpQAAAAAABIgAEEIAJA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\NodeClasses\TriangleMeshNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.PointGraph" Collapsed="true">
+    <Position X="0.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAgUAQgEQAIAAAIAKgJsggAAQEEAAAgKBgAyBAAIoAg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\PointGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.BBTree" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="55" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BGAEAAAjEAIgoAAAhAACZhAAKAEAAEAAAgAAAAJAAAg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Utilities\BBTree.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Pathfinding.EuclideanEmbedding" Collapsed="true">
+    <Position X="69" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAgAAAAQAiAIAAAQAAAAAAAAAACAAAAgAAAQAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Utilities\EuclideanEmbedding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.NavmeshTile" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="58.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAEgAAAAACiAAIAAAAEACIAEAAAEAAhAAUAAIAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Utilities\NavmeshTile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Pathfinding.ObjImporter" Collapsed="true">
+    <Position X="67.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAgAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Utilities\ObjImporter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.PointKDTree" Collapsed="true">
+    <Position X="67.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAgABQAAggAAKiAAAABCASAAAgAAgBCADAAIAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Utilities\PointKDTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AlternativePath" Collapsed="true">
+    <Position X="48" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACEVAAAAgBAAACAAAAAAAQgABgAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Modifiers\AlternativePath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.FunnelModifier" Collapsed="true">
+    <Position X="50.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAQABAAAAAAAAAAAAgAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Modifiers\FunnelModifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.PathModifier" Collapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFBAAAAABAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Modifiers\Modifiers.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pathfinding.MonoModifier" Collapsed="true">
+    <Position X="46.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAAAAAABAACAAAAAAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Modifiers\Modifiers.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pathfinding.RaycastModifier" Collapsed="true">
+    <Position X="43.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEEACAAAAHAAAEgAAIAEAAwACAAAAAAIAgBgAAAQgAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Modifiers\RaycastModifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.SimpleSmoothModifier" Collapsed="true">
+    <Position X="45.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAOAAAABAJAAwAAIAgAAQAgAAAAAAACAQAAAAIABAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Modifiers\SimpleSmoothModifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.StartEndModifier" Collapsed="true">
+    <Position X="0.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAABgAABAAAEAAAEAAAQAACAAAAAAgAAABAAAAoAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Modifiers\StartEndModifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.NavmeshUpdates" Collapsed="true">
+    <Position X="60.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAIAAAAAACAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Navmesh\NavmeshUpdates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.RelevantGraphSurface" Collapsed="true">
+    <Position X="14.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAEAAgAAAIAACAgAAAgIAAAIAAAAEAIAABAAAIACEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Navmesh\RelevantGraphSurface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.EnumFlagAttribute" Collapsed="true">
+    <Position X="67.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\PackageTools\EnumFlagAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.UniqueComponentAttribute" Collapsed="true">
+    <Position X="58.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\PackageTools\UniqueComponentAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.VersionedMonoBehaviour" Collapsed="true">
+    <Position X="27.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAgAAABAAAAAAAEAAAAAAAAAAAAAIAAAAAAEQ=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\PackageTools\VersionedMonoBehaviour.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pathfinding.ABPath" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgICDAQCCAQAxQEAUECgAAAACAEBEAAMAAAgAEQACEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Pathfinders\ABPath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.BlockManager" Collapsed="true">
+    <Position X="27.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgACAAAAIAAAAAAAAAQAAAAAAAAAAGAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\TurnBased\BlockManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.SingleNodeBlocker" Collapsed="true">
+    <Position X="41.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQEAAAAAAAAAAAAQAAAAAAEAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\TurnBased\SingleNodeBlocker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.AstarProfiler" Collapsed="true">
+    <Position X="62" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAQIBAAgAAKgAwAIAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\AstarProfiler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.DynamicGridObstacle" Collapsed="true">
+    <Position X="30" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAxAAAAAAAAAAAAAAQAAEAAAADASGAAIQAAGAAAEAEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\DynamicGridObstacle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Funnel" Collapsed="true">
+    <Position X="55" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAEAABCAAAAgQCACAAAAAAABAEAAAAACA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\Funnel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.GraphUpdateUtilities" Collapsed="true">
+    <Position X="56.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\GraphUpdateUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.PathUtilities" Collapsed="true">
+    <Position X="65.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAQAABAAACAAAABBAAgAAAAAgAAAAAAAAAAAEEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\PathUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.ProceduralGridMover" Collapsed="true">
+    <Position X="16.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgQCAAAAAAIAAgAAABCAAEAAAAAABAAAAAAgA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\ProceduralGridMover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Profile" Collapsed="true">
+    <Position X="58.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIAAECCAABAAEAAIAAYAAAAgEAAEQIACAAAAAAAI=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.UnityReferenceHelper" Collapsed="true">
+    <Position X="60.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAQEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Examples.TurnBasedAI" Collapsed="true">
+    <Position X="23.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACAAAAAAAIAAAAEAAAAIAAAAAAAAACAAAEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AI\TurnBasedAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Examples.ProceduralWorld" Collapsed="true">
+    <Position X="56.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIASAAAAAAIEAAAgAAAgAAAAAAgBAAACAAAQA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\ExampleScenes\Example12_Procedural\ProceduralWorld.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Examples.AstarSmoothFollow2" Collapsed="true">
+    <Position X="65.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABACAAAAAAAQAUAIAIAIAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\AstarSmoothFollow2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Examples.DoorController" Collapsed="true">
+    <Position X="62" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAARQAAACAAAAAAACAAAAAAAIAAAAAAAACiAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\DoorController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Examples.MineBotAI" Collapsed="true">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAoAAAAAAEAAAAAAAAAAAAAQAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\MineBotAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Examples.MineBotAnimation" Collapsed="true">
+    <Position X="52.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAABQAEEAAAAAAAQAAAQAAAAAQAAAAAAAEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\MineBotAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Examples.ObjectPlacer" Collapsed="true">
+    <Position X="62" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAAAAAAAAAAAQAAAAAgAAAAAAAAAAAAABAgA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\ObjectPlacer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.PreserveAttribute" Collapsed="true">
+    <Position X="55" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.ArrayPool&lt;T&gt;" Collapsed="true">
+    <Position X="55" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIIAAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAABAAQAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\ArrayPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.ListExtensions" Collapsed="true">
+    <Position X="67.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\ArrayPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.Draw" Collapsed="true">
+    <Position X="63.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAICAAAACICAAAAAAAAAAhAwAAAQBAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\Draw.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.ListPool&lt;T&gt;" Collapsed="true">
+    <Position X="69" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAAAAAAACEAAAAAAAAAAAAEBADgAgAABBAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\ListPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.MovementUtilities" Collapsed="true">
+    <Position X="56.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\MovementUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.ObjectPool&lt;T&gt;" Collapsed="true">
+    <Position X="63.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\ObjectPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.ObjectPoolSimple&lt;T&gt;" Collapsed="true">
+    <Position X="65.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAAAAAAACAAAAAAAAAAAAAAAAAAAgAABBAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\ObjectPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.PathInterpolator" Collapsed="true">
+    <Position X="56.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAUACABAsACKABACEgAIQAgAAAAAgAAQAQ=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\PathInterpolator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.StackPool&lt;T&gt;" Collapsed="true">
+    <Position X="65.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAACAAAAAAAAAAAAAABAAAAgAABBAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\StackPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.GraphTransform" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAIQIEAIIAIACAcCQAAgAAAAAAAAAAQgBEACA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Utilities\GraphTransform.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Pathfinding.Util.GridLookup&lt;T&gt;" Collapsed="true">
+    <Position X="60.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIAAAAAAIAIAAAAQIAABAACAAAAACAAAAAAAADAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Utilities\GridLookup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.Checksum" Collapsed="true">
+    <Position X="58.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\AstarChecksum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.Memory" Collapsed="true">
+    <Position X="55" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\AstarMemory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.ParallelWorkQueue&lt;T&gt;" Collapsed="true">
+    <Position X="69" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAgAABAAAAAAAAAQAAAAAAAAAAAEAo=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\AstarParallel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Util.GraphGizmoHelper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="60.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KBQAAwEAAAAAgBAAAEAQAAQAAgAIAAACBAAiAQAAQAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\GraphGizmoHelper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Pathfinding.Util.RetainedGizmos" Collapsed="true">
+    <Position X="60.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABEEAAABAgAABAAAAAQAIAAAEAGCAAAgCAEAAIA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AstarPath" Collapsed="true">
+    <Position X="25.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>aq4nCHCkaAEMxGw6BdAUgAXYasCDGhxIB5yUM0mIMmg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AstarPath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SnapToNode" Collapsed="true">
+    <Position X="63.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\SnapToNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.WindowsStore.WindowsStoreCompatibility" Collapsed="true">
+    <Position X="63.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\WindowsStoreCompatibility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Serialization.GraphSerializationContext" Collapsed="true">
+    <Position X="63.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAFAAAAACAAAgAAgAAAAgBAAAAAAAQAAAAgQIAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Serialization\JsonSerializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Serialization.AstarSerializer" Collapsed="true">
+    <Position X="63.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQMBgMggCACAAQAcIAAMBAAAmGqmRMKFBIAQAwgAEQo=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Serialization\JsonSerializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Serialization.GraphMeta" Collapsed="true">
+    <Position X="62" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAQACAAAACAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Serialization\JsonSerializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Serialization.SerializeSettings" Collapsed="true">
+    <Position X="62" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAACIAE=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Serialization\JsonSerializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Serialization.JsonMemberAttribute" Collapsed="true">
+    <Position X="63.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Serialization\TinyJson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Serialization.JsonOptInAttribute" Collapsed="true">
+    <Position X="65.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Serialization\TinyJson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Serialization.TinyJsonSerializer" Collapsed="true">
+    <Position X="56.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAgAAAABAAAAAAAAACCAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Serialization\TinyJson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Serialization.TinyJsonDeserializer" Collapsed="true">
+    <Position X="55" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAEAACAAAAQAAAABAAAEBIAMAABAAAAAAQgAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Serialization\TinyJson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pathfinding.Legacy.LegacyAIPath" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQkAkBIAQAAIAAAIAAAAAACAgAAAAAAAgAAAAAAAEA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Legacy\LegacyAIPath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Pathfinding.GraphHitInfo" Collapsed="true">
+    <Position X="58.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAACAAAAAQAAAAAAAAAAAAEAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Pathfinding.NNInfoInternal" Collapsed="true">
+    <Position X="55" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAQkAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Pathfinding.NNInfo" Collapsed="true">
+    <Position X="69" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAIAAAAAAAIAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Pathfinding.Progress" Collapsed="true">
+    <Position X="56.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAAAAAAAAAAgAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Pathfinding.IntRect" Collapsed="true">
+    <Position X="67.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAIAAAABAAEAAAEgAgAAEBAAAAAAIAQAAAAAUAQEqA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Pathfinding.GraphMask" Collapsed="true">
+    <Position X="60.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAEAAACAAAAAAAAALACAABAAAASAgA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Pathfinding.Int3" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAQAAIAAF6AUBAAAACCAAAIIAA0FgQQAAEiA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\Int3.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Pathfinding.Int2" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="63.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAE0AEACAAAACAAAIAAAABgwAAAAiA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\Int3.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Pathfinding.AstarWorkItem" Collapsed="true">
+    <Position X="55" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAEAQA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\WorkItemProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Pathfinding.Connection" Collapsed="true">
+    <Position X="56.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAgAAAAAAgAAAQAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Nodes\GraphNode.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Pathfinding.Util.Guid" Collapsed="true">
+    <Position X="62" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAACAQAIEgIAJIAAAAAAAAIAIAAQAAABAAiA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Utilities\DotNetReplacements.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Pathfinding.IAstarAI" Collapsed="true">
+    <Position X="55" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAACIAkQAQEGICAKAKAAAAAIAAIEBQABABAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\AI\IAstarAI.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.IUpdatableGraph" Collapsed="true">
+    <Position X="55" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAEABAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.ITransformedGraph" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.IRaycastableGraph" Collapsed="true">
+    <Position X="65.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.IWorkItemContext" Collapsed="true">
+    <Position X="58.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\WorkItemProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.ITraversalProvider" Collapsed="true">
+    <Position X="69" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Path.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.IPathInternals" Collapsed="true">
+    <Position X="62" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAARQAAEACAAAAAAAMAAAAAEAAAAEABAAE=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Path.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.IGraphInternals" Collapsed="true">
+    <Position X="58.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAgEAAAAAAAAAAAIAgAAAAAAAAAAAAAAGAAAAAg=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Base.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.INavmesh" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\NavMeshGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.INavmeshHolder" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEgAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\NodeClasses\TriangleMeshNode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.IPathModifier" Collapsed="true">
+    <Position X="63.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAABAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Modifiers\Modifiers.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.IVersionedMonoBehaviourInternal" Collapsed="true">
+    <Position X="56.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\PackageTools\VersionedMonoBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.Util.IAstarPooledObject" Collapsed="true">
+    <Position X="56.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\Misc\ObjectPool.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.Util.IMovementPlane" Collapsed="true">
+    <Position X="60.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Utilities\GraphTransform.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Pathfinding.Util.ITransform" Collapsed="true">
+    <Position X="67.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Utilities\GraphTransform.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Pathfinding.GraphUpdateStage" Collapsed="true">
+    <Position X="60.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAAAAIAAAAgA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.GraphUpdateThreading" Collapsed="true">
+    <Position X="62" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAACAAAEAAACAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.PathLog" Collapsed="true">
+    <Position X="60.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAgAAAAAAAAAAAAAAAAAAICAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.Heuristic" Collapsed="true">
+    <Position X="63.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAABAAAAAAAACAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.GraphDebugMode" Collapsed="true">
+    <Position X="58.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiAAAAAAAAAABAAAAAAAAAAAACAAEAAAAAAGEAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.ThreadCount" Collapsed="true">
+    <Position X="67.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACEAAEAIIAAAAFAAAAAAgAAAkAAIA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.PathState" Collapsed="true">
+    <Position X="62" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACQAAAAAAAAACAAAAAAQAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.PathCompleteState" Collapsed="true">
+    <Position X="58.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQIAAAAAAAEAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.CloseToDestinationMode" Collapsed="true">
+    <Position X="55" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.Side" Collapsed="true">
+    <Position X="65.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAABA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.InspectorGridHexagonNodeSize" Collapsed="true">
+    <Position X="67.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAABAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.InspectorGridMode" Collapsed="true">
+    <Position X="69" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAACAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.OrientationMode" Collapsed="true">
+    <Position X="56.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.ColliderType" Collapsed="true">
+    <Position X="56.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAIAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Base.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.RayDirection" Collapsed="true">
+    <Position X="63.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Base.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.NumNeighbours" Collapsed="true">
+    <Position X="55" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAABAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\GridGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pathfinding.HeuristicOptimizationMode" Collapsed="true">
+    <Position X="65.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAgAAAAAAAABAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Generators\Utilities\EuclideanEmbedding.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Pathfinding.OnPathDelegate" Collapsed="true">
+    <Position X="56.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Pathfinding.OnGraphDelegate" Collapsed="true">
+    <Position X="55" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Pathfinding.OnScanDelegate" Collapsed="true">
+    <Position X="58.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Pathfinding.OnScanStatus" Collapsed="true">
+    <Position X="60.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AstarPathfindingProject\Core\astarclasses.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
